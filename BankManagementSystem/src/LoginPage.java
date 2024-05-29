@@ -6,8 +6,10 @@ import java.awt.event.ActionEvent;
 public class LoginPage extends JFrame {
     public LoginPage(){
         setTitle("ATM Machine");
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("./Icons/credit-cards-payment.png"));
+        Image i2=i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         setLocation(400,200);
-        setBackground(Color.DARK_GRAY);
+        setBackground(Color.BLUE);
         setLayout(null);
         setSize(800,400);
         setVisible(true);
