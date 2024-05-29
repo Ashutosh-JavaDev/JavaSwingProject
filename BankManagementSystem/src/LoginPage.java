@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class LoginPage extends JFrame implements ActionListener {
+    JButton sign,signUp,Clear;
     public LoginPage() {
         setTitle("ATM Machine");
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/credit-cards-payment.png"));
@@ -41,14 +42,14 @@ public class LoginPage extends JFrame implements ActionListener {
         pinField.setBounds(130, 200, 200, 30);
         add(pinField);
         // SignIn Button
-        JButton sign = new JButton("Sign IN");
+         sign = new JButton("Sign IN");
         sign.setBounds(130, 240, 90, 30);
         sign.setBackground(Color.black);
         sign.setForeground(Color.white);
         add(sign);
         sign.addActionListener(this);
         // Login Button
-        JButton Clear = new JButton("Clear");
+         Clear = new JButton("Clear");
         Clear.setBounds(230, 240, 100, 30);
         Clear.setBackground(Color.black);
         Clear.setForeground(Color.white);
@@ -56,7 +57,7 @@ public class LoginPage extends JFrame implements ActionListener {
         Clear.addActionListener(this);
 
         // Sign Up
-        JButton signUp = new JButton("Sign UP");
+         signUp = new JButton("Sign UP");
         signUp.setBounds(130, 280, 200, 30);
         signUp.setBackground(Color.black);
         signUp.setForeground(Color.white);
@@ -73,7 +74,9 @@ public class LoginPage extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
+        if(){
 
+        }
     }
 
     public static void main(String[] args) {
