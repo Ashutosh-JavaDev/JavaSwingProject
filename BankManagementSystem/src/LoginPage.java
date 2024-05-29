@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class LoginPage extends JFrame {
+public class LoginPage extends JFrame implements ActionListener {
     public LoginPage() {
         setTitle("ATM Machine");
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/credit-cards-payment.png"));
@@ -46,18 +46,23 @@ public class LoginPage extends JFrame {
         sign.setBackground(Color.black);
         sign.setForeground(Color.white);
         add(sign);
+        sign.addActionListener(this);
         // Login Button
         JButton Clear = new JButton("Clear");
         Clear.setBounds(230, 240, 100, 30);
         Clear.setBackground(Color.black);
         Clear.setForeground(Color.white);
         add(Clear);
+        Clear.addActionListener(this);
+
         // Sign Up
         JButton signUp = new JButton("Sign UP");
         signUp.setBounds(130, 280, 200, 30);
         signUp.setBackground(Color.black);
         signUp.setForeground(Color.white);
         add(signUp);
+        signUp.addActionListener(this);
+
         // Important Function
         setLocation(400, 200);
         setLayout(null);
