@@ -23,9 +23,13 @@ public class LoginPage extends JFrame {
         // Card
         JLabel card = new JLabel("Card No.");
         card.setBounds(50, 120, 70, 30);
+        Font cardFont=new Font("Arial", Font.BOLD, 15);
+        card.setFont(cardFont);
         add(card);
         // pin
         JLabel Pin = new JLabel("Pin No.");
+        Font pinfont=new Font("Arial", Font.ITALIC, 15);
+        Pin.setFont(pinfont);
         Pin.setBounds(50, 200, 70, 30);
         add(Pin);
         // CardField
