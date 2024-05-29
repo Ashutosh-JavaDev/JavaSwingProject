@@ -5,9 +5,13 @@ import java.awt.event.ActionEvent;
 
 public class LoginPage extends JFrame{
     public LoginPage(){
+
         setLayout(null);
         setSize(800,400);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+    public static void main(String[]args){
+        LoginPage ob=new LoginPage();
     }
 }
