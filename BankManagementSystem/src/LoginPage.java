@@ -5,8 +5,9 @@ import java.awt.event.ActionEvent;
 
 public class LoginPage extends JFrame implements ActionListener {
     JButton sign, signUp, Clear;
-JTextField cardField;
-JPasswordField pinField;
+    JTextField cardField;
+    JPasswordField pinField;
+
     public LoginPage() {
         setTitle("ATM Machine");
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/credit-cards-payment.png"));
@@ -36,11 +37,11 @@ JPasswordField pinField;
         Pin.setBounds(50, 200, 70, 30);
         add(Pin);
         // CardField
-         cardField = new JTextField();
+        cardField = new JTextField();
         cardField.setBounds(130, 120, 200, 30);
         add(cardField);
         // pinField
-         pinField = new JPasswordField();
+        pinField = new JPasswordField();
         pinField.setBounds(130, 200, 200, 30);
         add(pinField);
         // SignIn Button
@@ -76,11 +77,10 @@ JPasswordField pinField;
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==sign){
+        if (ae.getSource() == sign) {
 
-        }
-        else if(ae.getSource()==Clear){
-             
+        } else if (ae.getSource() == Clear) {
+
         }
     }
 
