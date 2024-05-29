@@ -40,7 +40,12 @@ public class LoginPage extends JFrame {
         Clear.setBackground(Color.black);
         Clear.setForeground(Color.white);
         add(Clear);
-
+        // Sign Up
+        JButton signUp = new JButton("Sign UP");
+        signUp.setBounds(120, 300, 150, 30);
+        signUp.setBackground(Color.black);
+        signUp.setForeground(Color.white);
+        add(signUp);
         setLocation(400, 200);
         setLayout(null);
         setSize(800, 400);
