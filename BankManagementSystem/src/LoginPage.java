@@ -46,6 +46,7 @@ public class LoginPage extends JFrame {
         signUp.setBackground(Color.black);
         signUp.setForeground(Color.white);
         add(signUp);
+        // Important Function
         setLocation(400, 200);
         setLayout(null);
         setSize(800, 400);
