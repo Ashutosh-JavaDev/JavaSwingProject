@@ -13,22 +13,22 @@ public class LoginPage extends JFrame implements ActionListener {
         label.setBounds(50, 10, 100, 100);
         add(label);
         // ATM
-        JLabel atm=new JLabel("AutoMated Teller Machine");
-        atm.setBounds(200,50,350,30);
+        JLabel atm = new JLabel("AutoMated Teller Machine");
+        atm.setBounds(200, 50, 350, 30);
         Font font = new Font("Arial", Font.BOLD, 20); // You can change "Arial" and 20 to your preference
-        
+
         // Set the font to the JLabel
         atm.setFont(font);
         add(atm);
         // Card
         JLabel card = new JLabel("Card No.");
         card.setBounds(50, 120, 70, 30);
-        Font cardFont=new Font("Arial", Font.BOLD, 15);
+        Font cardFont = new Font("Arial", Font.BOLD, 15);
         card.setFont(cardFont);
         add(card);
         // pin
         JLabel Pin = new JLabel("Pin No.");
-        Font pinfont=new Font("Arial", Font.BOLD, 15);
+        Font pinfont = new Font("Arial", Font.BOLD, 15);
         Pin.setFont(pinfont);
         Pin.setBounds(50, 200, 70, 30);
         add(Pin);
@@ -69,6 +69,11 @@ public class LoginPage extends JFrame implements ActionListener {
         setSize(800, 400);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent ae) {
+
     }
 
     public static void main(String[] args) {
