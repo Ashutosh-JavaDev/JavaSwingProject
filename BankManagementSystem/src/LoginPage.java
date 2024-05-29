@@ -14,7 +14,11 @@ public class LoginPage extends JFrame {
         add(label);
         // ATM
         JLabel atm=new JLabel("AutoMated Teller Machine");
-        atm.setBounds(100,10,250,30);
+        atm.setBounds(200,50,350,30);
+        Font font = new Font("Arial", Font.BOLD, 20); // You can change "Arial" and 20 to your preference
+        
+        // Set the font to the JLabel
+        atm.setFont(font);
         add(atm);
         // Card
         JLabel card = new JLabel("Card No.");
