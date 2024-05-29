@@ -35,11 +35,11 @@ public class LoginPage extends JFrame {
         sign.setForeground(Color.white);
         add(sign);
         // Login Button
-        JButton login = new JButton("Log IN");
-        login.setBounds(180, 250, 70, 30);
-        login.setBackground(Color.black);
-        login.setForeground(Color.white);
-        add(login);
+        JButton Clear = new JButton("Clear");
+        Clear.setBounds(180, 250, 70, 30);
+        Clear.setBackground(Color.black);
+        Clear.setForeground(Color.white);
+        add(Clear);
 
         setLocation(400, 200);
         setLayout(null);
