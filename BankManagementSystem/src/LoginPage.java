@@ -9,6 +9,8 @@ public class LoginPage extends JFrame {
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("./Icons/credit-cards-payment.png"));
         Image i2=i1.getImage().getScaledInstance(100, 100, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
+        JLabel label=new JLabel(i3);
+        add(label);
         setLocation(400,200);
         setBackground(Color.BLUE);
         setLayout(null);
