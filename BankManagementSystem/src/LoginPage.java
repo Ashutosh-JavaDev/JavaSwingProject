@@ -81,7 +81,9 @@ public class LoginPage extends JFrame implements ActionListener {
 
         } else if (ae.getSource() == Clear) {
             String card = "" + cardField;
+            cardField.setText(card);
             String pin = "" + pinField;
+            pinField.setText(pin);
         } else if (ae.getSource() == signUp) {
 
         }
