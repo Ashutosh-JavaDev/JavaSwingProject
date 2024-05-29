@@ -3,15 +3,18 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class LoginPage extends JFrame{
+public class LoginPage extends JFrame {
     public LoginPage(){
-
+        setTitle("ATM Machine");
+        setLocation(400,200);
+        setBackground(Color.DARK_GRAY);
         setLayout(null);
         setSize(800,400);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-    public static void main(String[]args){
-        LoginPage ob=new LoginPage();
+
+    public static void main(String[] args) {
+        LoginPage ob = new LoginPage();
     }
 }
