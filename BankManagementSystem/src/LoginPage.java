@@ -28,33 +28,33 @@ public class LoginPage extends JFrame {
         add(card);
         // pin
         JLabel Pin = new JLabel("Pin No.");
-        Font pinfont=new Font("Arial", Font.ITALIC, 15);
+        Font pinfont=new Font("Arial", Font.BOLD, 15);
         Pin.setFont(pinfont);
         Pin.setBounds(50, 200, 70, 30);
         add(Pin);
         // CardField
         JTextField cardField = new JTextField();
-        cardField.setBounds(120, 120, 200, 30);
+        cardField.setBounds(130, 120, 200, 30);
         add(cardField);
         // pinField
         JPasswordField pinField = new JPasswordField();
-        pinField.setBounds(120, 200, 200, 30);
+        pinField.setBounds(130, 200, 200, 30);
         add(pinField);
         // SignIn Button
         JButton sign = new JButton("Sign IN");
-        sign.setBounds(120, 240, 90, 30);
+        sign.setBounds(130, 240, 90, 30);
         sign.setBackground(Color.black);
         sign.setForeground(Color.white);
         add(sign);
         // Login Button
         JButton Clear = new JButton("Clear");
-        Clear.setBounds(220, 240, 100, 30);
+        Clear.setBounds(230, 240, 100, 30);
         Clear.setBackground(Color.black);
         Clear.setForeground(Color.white);
         add(Clear);
         // Sign Up
         JButton signUp = new JButton("Sign UP");
-        signUp.setBounds(120, 280, 200, 30);
+        signUp.setBounds(130, 280, 200, 30);
         signUp.setBackground(Color.black);
         signUp.setForeground(Color.white);
         add(signUp);
