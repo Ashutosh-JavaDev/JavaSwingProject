@@ -13,7 +13,9 @@ public class LoginPage extends JFrame {
         label.setBounds(50,10,100,100);
         add(label);
         JLabel card=new JLabel("Card No.");
+        card.setBounds(50,70,70,100);
         JLabel Pin=new JLabel("Pin No.");
+        Pin.setBounds(50,100,70,100);
         JTextField cardField=new JTextField();
         JTextField pinField=new JTextField();
         setLocation(400,200);
