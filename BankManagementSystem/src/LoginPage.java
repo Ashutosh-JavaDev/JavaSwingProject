@@ -80,11 +80,10 @@ public class LoginPage extends JFrame implements ActionListener {
         if (ae.getSource() == sign) {
 
         } else if (ae.getSource() == Clear) {
-            String card=""+cardField;
-            String pin=""+pinField;
-        }
-        else if(ae.getSource()==signUp){
-            
+            String card = "" + cardField;
+            String pin = "" + pinField;
+        } else if (ae.getSource() == signUp) {
+
         }
     }
 
