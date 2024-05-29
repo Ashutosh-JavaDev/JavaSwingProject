@@ -12,6 +12,10 @@ public class LoginPage extends JFrame {
         JLabel label = new JLabel(i3);
         label.setBounds(50, 10, 100, 100);
         add(label);
+        // ATM
+        JLabel atm=new JLabel("AutoMated Teller Machine");
+        atm.setBounds(100,10,250,30);
+        add(atm);
         // Card
         JLabel card = new JLabel("Card No.");
         card.setBounds(50, 120, 70, 30);
@@ -22,27 +26,27 @@ public class LoginPage extends JFrame {
         add(Pin);
         // CardField
         JTextField cardField = new JTextField();
-        cardField.setBounds(120, 120, 150, 30);
+        cardField.setBounds(120, 120, 200, 30);
         add(cardField);
         // pinField
-        JTextField pinField = new JTextField();
-        pinField.setBounds(120, 200, 150, 30);
+        JPasswordField pinField = new JPasswordField();
+        pinField.setBounds(120, 200, 200, 30);
         add(pinField);
         // SignIn Button
         JButton sign = new JButton("Sign IN");
-        sign.setBounds(120, 250, 70, 30);
+        sign.setBounds(120, 240, 90, 30);
         sign.setBackground(Color.black);
         sign.setForeground(Color.white);
         add(sign);
         // Login Button
         JButton Clear = new JButton("Clear");
-        Clear.setBounds(180, 250, 70, 30);
+        Clear.setBounds(220, 240, 100, 30);
         Clear.setBackground(Color.black);
         Clear.setForeground(Color.white);
         add(Clear);
         // Sign Up
         JButton signUp = new JButton("Sign UP");
-        signUp.setBounds(120, 300, 150, 30);
+        signUp.setBounds(120, 280, 200, 30);
         signUp.setBackground(Color.black);
         signUp.setForeground(Color.white);
         add(signUp);
