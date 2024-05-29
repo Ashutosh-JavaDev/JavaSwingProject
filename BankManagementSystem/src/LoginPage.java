@@ -13,7 +13,6 @@ public class LoginPage extends JFrame {
         label.setBounds(50,10,100,100);
         add(label);
         setLocation(400,200);
-        setBackground(Color.BLUE);
         setLayout(null);
         setSize(800,400);
         setVisible(true);
