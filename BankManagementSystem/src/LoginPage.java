@@ -12,6 +12,10 @@ public class LoginPage extends JFrame {
         JLabel label=new JLabel(i3);
         label.setBounds(50,10,100,100);
         add(label);
+        JLabel card=new JLabel("Card No.");
+        JLabel Pin=new JLabel("Pin No.");
+        JTextField cardField=new JTextField();
+        JTextField pinField=new JTextField();
         setLocation(400,200);
         setLayout(null);
         setSize(800,400);
