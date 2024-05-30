@@ -69,6 +69,27 @@ public class SignUPone extends JFrame implements ActionListener {
         AddressTextField.setBounds(370,290,300,20);
         AddressTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(AddressTextField);
+        // City
+        City = new JLabel("City: ");
+        City.setBounds(100,350,120,30);
+        City.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(City);
+        // TextField
+        CityTextField=new JTextField();
+        CityTextField.setBounds(370,350,300,20);
+        CityTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(CityTextField);
+        // State
+        State = new JLabel("State: ");
+        State.setBounds(100,410,120,30);
+        State.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(LastName);
+        // TextField
+        StateTextField=new JTextField();
+        StateTextField.setBounds(370,410,300,20);
+        StateTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(StateTextField);
+        // Gender
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
