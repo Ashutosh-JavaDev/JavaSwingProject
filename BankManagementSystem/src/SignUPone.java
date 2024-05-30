@@ -192,16 +192,21 @@ public class SignUPone extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(rootPane, "Father's Name Required");
             } else if (city.equals("")) {
                 JOptionPane.showMessageDialog(rootPane, "City Name Required");
+            } else if (Gender.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Gender Required");
+            } else if (status.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Maratial Status Required");
             } else if (state.equals("")) {
                 JOptionPane.showMessageDialog(rootPane, "State Name Required");
             } else if (Pincode.equals("")) {
-                JOptionPane.showMessageDialog(rootPane, "Pincode Name Required");
+                JOptionPane.showMessageDialog(rootPane, "Pincode Required");
             } else if (email.equals("")) {
-                JOptionPane.showMessageDialog(rootPane, "Email Name Required");
+                JOptionPane.showMessageDialog(rootPane, "Email Required");
             } else {
                 BankDataBase conn = new BankDataBase();
                 String query = "Insert into Signup values('" + formNo + "','" + fName + "','" + lName + "','" + Father
-                        + "','" + Gender + "','" + status + "','" + city + "','" + state + "','" + Pincode + "','" + email + "')";
+                        + "','" + Gender + "','" + status + "','" + city + "','" + state + "','" + Pincode + "','"
+                        + email + "')";
                 conn.statem.executeUpdate(query);
             }
         } catch (Exception e) {
