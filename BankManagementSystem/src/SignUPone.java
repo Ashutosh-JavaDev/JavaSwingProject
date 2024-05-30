@@ -162,13 +162,13 @@ public class SignUPone extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        String fName = FirstName.getText();
-        String lName = LastName.getText();
-        String Father =  FatherName.getText();
-        String city =  City.getText();
-        String state = State.getText();
-        String Pincode =  Pin.getText();
-        String email = Email.getText();
+        String fName = FirstTextField.getText();
+        String lName = LastTextField.getText();
+        String Father =  FatherTextField.getText();
+        String city =  CityTextField.getText();
+        String state = StateTextField.getText();
+        String Pincode =  PinTextField.getText();
+        String email = EmailTextField.getText();
        try{
         if (fName.equals("")) {
             JOptionPane.showMessageDialog(rootPane, "First Name Required");
