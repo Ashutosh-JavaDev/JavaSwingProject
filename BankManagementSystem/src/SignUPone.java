@@ -7,7 +7,7 @@ import java.util.random.*;
 
 public class SignUPone extends JFrame implements ActionListener {
     JLabel FirstName, LastName, FatherName, DOB, Gender, Email, Maratial, Address, City, State, Pin;
-    JTextField FirstTextField, LastTextField, DOBTextField, GenderTextField, EmailTextField, MaratialTextField,
+    JTextField FirstTextField, LastTextField,FatherTextField, DOBTextField, GenderTextField, EmailTextField, MaratialTextField,
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
     Random random = new Random();
@@ -21,12 +21,12 @@ public class SignUPone extends JFrame implements ActionListener {
         add(form);
         // FirstName Label
         FirstName = new JLabel("First Name: ");
-        FirstName.setBounds(100,70,120,30);
+        FirstName.setBounds(100,70,130,30);
         FirstName.setFont(new Font("Josefin sans",Font.BOLD,20));
         add(FirstName);
         // TextField
         FirstTextField=new JTextField();
-        FirstTextField.setBounds(270,70,100,20);
+        FirstTextField.setBounds(370,70,300,20);
         FirstTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(FirstTextField);
         // LastName Label
@@ -36,8 +36,18 @@ public class SignUPone extends JFrame implements ActionListener {
         add(LastName);
         // TextField
         LastTextField=new JTextField();
-        LastTextField.setBounds(270,130,100,20);
+        LastTextField.setBounds(370,130,300,20);
         LastTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(LastTextField);
+        // FatherName
+        FatherName = new JLabel("Last Name: ");
+        FatherName.setBounds(100,130,120,30);
+        FatherName.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(LastName);
+        // TextField
+        FatherTextField=new JTextField();
+        FatherTextField.setBounds(370,130,300,20);
+        FatherTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(LastTextField);
         // 
         next = new JButton("NEXT");
