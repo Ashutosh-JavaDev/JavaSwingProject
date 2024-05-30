@@ -85,7 +85,8 @@ public class LoginPage extends JFrame implements ActionListener {
             String pin = "";
             pinField.setText(pin);
         } else if (ae.getSource() == signUp) {
-
+            setVisible(false);
+            new SignUPone().setVisible(true);
         }
     }
 

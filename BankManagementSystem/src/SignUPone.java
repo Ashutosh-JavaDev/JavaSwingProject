@@ -192,6 +192,6 @@ public class SignUPone extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SignUPone ob = new SignUPone();
+        SignUPone so = new SignUPone();
     }
 }
