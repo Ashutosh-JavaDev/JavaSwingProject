@@ -30,7 +30,16 @@ public class SignUPone extends JFrame implements ActionListener {
         FirstTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(FirstTextField);
         // LastName Label
-        
+        LastName = new JLabel("Last Name: ");
+        LastName.setBounds(100,130,120,30);
+        LastName.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(LastName);
+        // TextField
+        LastTextField=new JTextField();
+        LastTextField.setBounds(270,130,100,20);
+        LastTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(LastTextField);
+        // 
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
