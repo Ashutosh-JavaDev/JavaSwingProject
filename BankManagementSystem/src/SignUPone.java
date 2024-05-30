@@ -13,10 +13,11 @@ public class SignUPone extends JFrame implements ActionListener {
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
     Random random = new Random();
+    long ran;
 
     public SignUPone() {
         // Random Number
-        long ran = Math.abs(random.nextLong() % 9000L + 1000);
+        ran = Math.abs(random.nextLong() % 9000L + 1000);
         JLabel form = new JLabel("Application No.: " + ran);
         form.setBounds(250, 10, 400, 35);
         form.setFont(new Font("Rubik", Font.BOLD, 30));
@@ -162,33 +163,38 @@ public class SignUPone extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+        String formNo = "" + ran;
         String fName = FirstTextField.getText();
         String lName = LastTextField.getText();
-        String Father =  FatherTextField.getText();
-        String city =  CityTextField.getText();
+        String Father = FatherTextField.getText();
+        String city = CityTextField.getText();
         String state = StateTextField.getText();
-        String Pincode =  PinTextField.getText();
+        String Pincode = PinTextField.getText();
         String email = EmailTextField.getText();
-       try{
-        if (fName.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "First Name Required");
-        } else if (lName.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Last Name Required");
-        } else if (Father.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Father's Name Required");
-        } else if (city.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "City Name Required");
-        } else if (state.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "State Name Required");
-        } else if (Pincode.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Pincode Name Required");
-        } else if (email.equals("")) {
-            JOptionPane.showMessageDialog(rootPane, "Email Name Required");
+        try {
+            if (fName.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "First Name Required");
+            } else if (lName.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Last Name Required");
+            } else if (Father.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Father's Name Required");
+            } else if (city.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "City Name Required");
+            } else if (state.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "State Name Required");
+            } else if (Pincode.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Pincode Name Required");
+            } else if (email.equals("")) {
+                JOptionPane.showMessageDialog(rootPane, "Email Name Required");
+            } else {
+                BankDataBase conn = new BankDataBase();
+                String query = "Insert into signUp values('" + formNo + "','" + fName + "','" + lName + "','" + Father
+                        + "','" + city + "','" + state + "','" + Pincode + "','" + email + "')";
+                conn.statem.executeUpdate(query);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-       }
-       catch(Exception e){
-        e.printStackTrace();
-       }
     }
 
     public static void main(String[] args) {
