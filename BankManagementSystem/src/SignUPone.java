@@ -6,9 +6,10 @@ import java.util.Random;
 import java.util.random.*;
 
 public class SignUPone extends JFrame implements ActionListener {
-    JLabel FirstName, LastName, FatherName, DOB, Gender, Email, Maratial, Address, City, State, Pin;
-    JTextField FirstTextField, LastTextField, FatherTextField, DOBTextField, GenderTextField, EmailTextField,
-            MaratialTextField,
+    JLabel FirstName, LastName, FatherName, DOB, Email,Gender, Address, City, State, Pin;
+    JRadioButton Married,UnMarried,Maratial,Male,Female;
+    JTextField FirstTextField, LastTextField, FatherTextField, DOBTextField, EmailTextField,
+        
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
     Random random = new Random();
@@ -42,14 +43,14 @@ public class SignUPone extends JFrame implements ActionListener {
         add(LastTextField);
         // FatherName
         FatherName = new JLabel("Father's Name: ");
-        FatherName.setBounds(100, 190, 120, 30);
+        FatherName.setBounds(100, 190, 180, 30);
         FatherName.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(FatherName);
         // TextField
         FatherTextField = new JTextField();
         FatherTextField.setBounds(370, 190, 300, 20);
         FatherTextField.setFont(new Font("Outfit", Font.BOLD, 20));
-        add(LastTextField);
+        add(FatherTextField);
         // Email
         Email = new JLabel("Eamil ID: ");
         Email.setBounds(100, 230, 120, 30);
@@ -84,13 +85,28 @@ public class SignUPone extends JFrame implements ActionListener {
         State = new JLabel("State: ");
         State.setBounds(100, 410, 120, 30);
         State.setFont(new Font("Josefin sans", Font.BOLD, 20));
-        add(LastName);
+        add(State);
         // TextField
         StateTextField = new JTextField();
         StateTextField.setBounds(370, 410, 300, 20);
         StateTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(StateTextField);
         // Gender
+        Gender = new JLabel("Gender: ");
+        Gender.setBounds(100, 470, 120, 30);
+        Gender.setFont(new Font("Josefin sans", Font.BOLD, 20));
+        add(Gender);
+        // Button
+        Male = new JRadioButton();
+        Male.setBounds(370, 470, 300, 20);
+        Male.setFont(new Font("Outfit", Font.BOLD, 20));
+        add(Male);
+        // Female
+        Female = new JRadioButton();
+        Female.setBounds(420, 470, 300, 20);
+        Female.setFont(new Font("Outfit", Font.BOLD, 20));
+        add(Female);
+
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
