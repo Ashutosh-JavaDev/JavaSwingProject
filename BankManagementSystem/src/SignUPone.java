@@ -2,15 +2,20 @@ import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
+import java.util.Random;
+import java.util.random.*;
 
 public class SignUPone extends JFrame implements ActionListener {
     JLabel FirstName, LastName, FatherName, DOB, Gender, Email, Maratial, Address, City, State, Pin;
     JTextField FirstTextField, LastTextField, DOBTextField, GenderTextField, EmailTextField, MaratialTextField,
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
+    Random random = new Random();
 
     public SignUPone() {
-
+        // FirstName Label
+        FirstName = new JLabel("First Name");
+        // FirstName.setBounds(EXIT_ON_CLOSE, ABORT, WIDTH, HEIGHT);
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
