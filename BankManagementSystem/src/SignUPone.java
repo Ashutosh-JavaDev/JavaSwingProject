@@ -6,10 +6,10 @@ import java.util.Random;
 import java.util.random.*;
 
 public class SignUPone extends JFrame implements ActionListener {
-    JLabel FirstName, LastName, FatherName, DOB, Email,Gender, Address, City, State, Pin;
-    JRadioButton Married,UnMarried,Maratial,Male,Female;
+    JLabel FirstName, LastName, FatherName, DOB, Email, Gender, Address, Maratial, City, State, Pin;
+    JRadioButton Married, UnMarried, Male, Female;
     JTextField FirstTextField, LastTextField, FatherTextField, DOBTextField, EmailTextField,
-        
+
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
     Random random = new Random();
@@ -97,16 +97,31 @@ public class SignUPone extends JFrame implements ActionListener {
         Gender.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(Gender);
         // Button
-        Male = new JRadioButton();
+        Male = new JRadioButton("Male");
         Male.setBounds(370, 470, 300, 20);
         Male.setFont(new Font("Outfit", Font.BOLD, 20));
         add(Male);
         // Female
-        Female = new JRadioButton();
+        Female = new JRadioButton("Female");
         Female.setBounds(420, 470, 300, 20);
         Female.setFont(new Font("Outfit", Font.BOLD, 20));
         add(Female);
-
+        // Maratial Status
+        Maratial = new JLabel("Maratial Status: ");
+        Maratial.setBounds(100, 520, 120, 30);
+        Maratial.setFont(new Font("Josefin sans", Font.BOLD, 20));
+        add(Maratial);
+        // Button
+        Married = new JRadioButton("Married");
+        Married.setBounds(370, 520, 300, 20);
+        Married.setFont(new Font("Outfit", Font.BOLD, 20));
+        add(Married);
+        // Female
+        UnMarried = new JRadioButton("UnMarried");
+        UnMarried.setBounds(420, 520, 300, 20);
+        UnMarried.setFont(new Font("Outfit", Font.BOLD, 20));
+        add(UnMarried);
+        // Next
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
