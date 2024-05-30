@@ -13,9 +13,10 @@ public class SignUPone extends JFrame implements ActionListener {
     Random random = new Random();
 
     public SignUPone() {
+        // Random Number
         long ran = Math.abs(random.nextLong() % 9000L + 1000);
         JLabel form=new JLabel("Application No.: "+ran);
-        form.setBounds(150,10,00,20);
+        form.setBounds(150,10,100,20);
         form.setFont(new Font("Rubik",Font.BOLD,30));
         add(form);
         // FirstName Label
