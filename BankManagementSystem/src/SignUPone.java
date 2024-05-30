@@ -29,7 +29,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(FirstName);
         // TextField
         FirstTextField = new JTextField();
-        FirstTextField.setBounds(370, 70, 300, 20);
+        FirstTextField.setBounds(370, 70, 300, 30);
         FirstTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(FirstTextField);
         // LastName Label
@@ -39,7 +39,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(LastName);
         // TextField
         LastTextField = new JTextField();
-        LastTextField.setBounds(370, 130, 300, 20);
+        LastTextField.setBounds(370, 130, 300, 30);
         LastTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(LastTextField);
         // FatherName
@@ -49,7 +49,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(FatherName);
         // TextField
         FatherTextField = new JTextField();
-        FatherTextField.setBounds(370, 190, 300, 20);
+        FatherTextField.setBounds(370, 190, 300, 30);
         FatherTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(FatherTextField);
         // Email
@@ -59,7 +59,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(Email);
         // TextField
         EmailTextField = new JTextField();
-        EmailTextField.setBounds(370, 230, 300, 20);
+        EmailTextField.setBounds(370, 230, 300, 30);
         EmailTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(EmailTextField);
         // Address
@@ -69,7 +69,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(Address);
         // TextField
         AddressTextField = new JTextField();
-        AddressTextField.setBounds(370, 290, 300, 20);
+        AddressTextField.setBounds(370, 290, 300, 30);
         AddressTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(AddressTextField);
         // City
@@ -79,7 +79,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(City);
         // TextField
         CityTextField = new JTextField();
-        CityTextField.setBounds(370, 350, 300, 20);
+        CityTextField.setBounds(370, 350, 300, 30);
         CityTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(CityTextField);
         // State
@@ -89,7 +89,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(State);
         // TextField
         StateTextField = new JTextField();
-        StateTextField.setBounds(370, 410, 300, 20);
+        StateTextField.setBounds(370, 410, 300, 30);
         StateTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(StateTextField);
         // Gender
@@ -142,7 +142,7 @@ public class SignUPone extends JFrame implements ActionListener {
         add(Pin);
         // TextField
         PinTextField = new JTextField();
-        PinTextField.setBounds(370, 570, 300, 20);
+        PinTextField.setBounds(370, 570, 300, 30);
         PinTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(PinTextField);
         // Next
