@@ -53,7 +53,7 @@ public class SignUPone extends JFrame implements ActionListener {
         FatherTextField.setFont(new Font("Outfit", Font.BOLD, 20));
         add(FatherTextField);
         // Email
-        Email = new JLabel("Eamil ID: ");
+        Email = new JLabel("Email ID: ");
         Email.setBounds(100, 230, 120, 30);
         Email.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(Email);
@@ -167,10 +167,22 @@ public class SignUPone extends JFrame implements ActionListener {
         String fName = FirstTextField.getText();
         String lName = LastTextField.getText();
         String Father = FatherTextField.getText();
+        String Gender = null;
+        String status = null;
         String city = CityTextField.getText();
         String state = StateTextField.getText();
         String Pincode = PinTextField.getText();
         String email = EmailTextField.getText();
+        if (Married.isSelected()) {
+            status = "Married";
+        } else if (UnMarried.isSelected()) {
+            status = "UnMarried";
+        }
+        if (Male.isSelected()) {
+            Gender = "Male";
+        } else if (Female.isSelected()) {
+            Gender = "Female";
+        }
         try {
             if (fName.equals("")) {
                 JOptionPane.showMessageDialog(rootPane, "First Name Required");
@@ -189,7 +201,7 @@ public class SignUPone extends JFrame implements ActionListener {
             } else {
                 BankDataBase conn = new BankDataBase();
                 String query = "Insert into Signup values('" + formNo + "','" + fName + "','" + lName + "','" + Father
-                        + "','" + city + "','" + state + "','" + Pincode + "','" + email + "')";
+                        + "','" + Gender + "','" + status + "','" + city + "','" + state + "','" + Pincode + "','" + email + "')";
                 conn.statem.executeUpdate(query);
             }
         } catch (Exception e) {
