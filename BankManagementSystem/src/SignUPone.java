@@ -98,33 +98,41 @@ public class SignUPone extends JFrame implements ActionListener {
         add(Gender);
         // Button
         Male = new JRadioButton("Male");
-        Male.setBounds(370, 470, 300, 20);
+        Male.setBounds(370, 470, 100, 20);
         Male.setFont(new Font("Outfit", Font.BOLD, 20));
+        Male.setBackground(Color.white);
         add(Male);
         // Female
         Female = new JRadioButton("Female");
-        Female.setBounds(420, 470, 300, 20);
+        Female.setBounds(520, 470, 100, 20);
         Female.setFont(new Font("Outfit", Font.BOLD, 20));
+        Female.setBackground(Color.white);
+
         add(Female);
         // Maratial Status
         Maratial = new JLabel("Maratial Status: ");
-        Maratial.setBounds(100, 520, 120, 30);
+        Maratial.setBounds(100, 520, 180, 30);
         Maratial.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(Maratial);
         // Button
         Married = new JRadioButton("Married");
-        Married.setBounds(370, 520, 300, 20);
+        Married.setBounds(370, 520, 150, 20);
         Married.setFont(new Font("Outfit", Font.BOLD, 20));
+        Married.setBackground(Color.white);
+
         add(Married);
         // Female
         UnMarried = new JRadioButton("UnMarried");
-        UnMarried.setBounds(420, 520, 300, 20);
+        UnMarried.setBounds(520, 520,180, 20);
         UnMarried.setFont(new Font("Outfit", Font.BOLD, 20));
+        UnMarried.setBackground(Color.white);
         add(UnMarried);
         // Next
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
-        next.setBounds(600,650,100,20);
+        next.setForeground(Color.white);
+        next.setBounds(600, 650, 100, 30);
+        next.setBackground(Color.black);
         add(next);
         next.addActionListener(this);
         setLocation(450, 100);
