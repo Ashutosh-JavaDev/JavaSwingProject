@@ -208,6 +208,7 @@ public class SignUPone extends JFrame implements ActionListener {
                         + "','" + Gender + "','" + status + "','" + city + "','" + state + "','" + Pincode + "','"
                         + email + "')";
                 conn.statem.executeUpdate(query);
+                JOptionPane.showMessageDialog(rootPane, "Page 1 Done.");
             }
         } catch (Exception e) {
             e.printStackTrace();

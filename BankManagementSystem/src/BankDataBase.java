@@ -8,17 +8,13 @@ import java.util.MissingFormatArgumentException;
 import javax.swing.JOptionPane;
 
 public class BankDataBase {
-    Connection conn=null;
-    Statement statem=null;
+    Connection conn;
+    Statement statem;
 
     public BankDataBase() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/";
-            String database = "BankManagementSystem";
-            String username = "root";
-            String password = "@Radhakrishna297";
-            conn = DriverManager.getConnection(url, username, password);
+            conn = DriverManager.getConnection("jdbc:mysql:///BankManagementSystem", "root", "@Radhakrishna297");
             statem = conn.createStatement();
         }
 
