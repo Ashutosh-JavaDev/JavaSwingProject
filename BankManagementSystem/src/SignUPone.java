@@ -123,10 +123,17 @@ public class SignUPone extends JFrame implements ActionListener {
         add(Married);
         // Female
         UnMarried = new JRadioButton("UnMarried");
-        UnMarried.setBounds(520, 520,180, 20);
+        UnMarried.setBounds(520, 520, 180, 20);
         UnMarried.setFont(new Font("Outfit", Font.BOLD, 20));
         UnMarried.setBackground(Color.white);
         add(UnMarried);
+        // Button Group
+        ButtonGroup group = new ButtonGroup();
+        group.add(Female);
+        group.add(Male);
+        ButtonGroup GroupTwo = new ButtonGroup();
+        GroupTwo.add(Married);
+        GroupTwo.add(UnMarried);
         // Next
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
