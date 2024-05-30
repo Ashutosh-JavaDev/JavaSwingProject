@@ -15,7 +15,7 @@ public class BankDataBase {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/";
-            String database = "Management";
+            String database = "BankManagementSystem";
             String username = "root";
             String password = "@Radhakrishna297";
             conn = DriverManager.getConnection(url, username, password);
