@@ -134,6 +134,16 @@ public class SignUPone extends JFrame implements ActionListener {
         ButtonGroup GroupTwo = new ButtonGroup();
         GroupTwo.add(Married);
         GroupTwo.add(UnMarried);
+        // PinCode
+        Pin = new JLabel("Pincode: ");
+        Pin.setBounds(100, 470, 100, 30);
+        Pin.setFont(new Font("Josefin sans", Font.BOLD, 20));
+        add(Pin);
+        // TextField
+        PinTextField = new JTextField();
+        PinTextField.setBounds(370, 470, 300, 20);
+        PinTextField.setFont(new Font("Outfit", Font.BOLD, 20));
+        add(PinTextField);
         // Next
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
@@ -152,7 +162,17 @@ public class SignUPone extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-
+        String fName=""+FirstName;
+        String lName=""+LastName;
+        String Father=""+FatherName;
+        String city=""+City;
+        String state=""+State;
+        String Pincode=""+Pin;
+        String email=""+Email;
+        if(fName.equals("")){
+            JOptionPane.showMessageDialog(rootPane, "First Name Required");
+        }
+        
     }
 
     public static void main(String[] args) {
