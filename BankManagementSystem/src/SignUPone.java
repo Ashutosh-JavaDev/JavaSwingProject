@@ -124,6 +124,8 @@ public class SignUPone extends JFrame implements ActionListener {
         // Next
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
+        next.setBounds(600,650,100,20);
+        add(next);
         next.addActionListener(this);
         setLocation(450, 100);
         setTitle("REGISTRATION FORM");
