@@ -15,7 +15,7 @@ public class SignUPone extends JFrame implements ActionListener {
     public SignUPone() {
         long ran = Math.abs(random.nextLong() % 9000L + 1000);
         JLabel form=new JLabel("Application No.: "+ran);
-        form.setBounds(250,10,200,20);
+        form.setBounds(150,10,00,20);
         form.setFont(new Font("Rubik",Font.BOLD,30));
         add(form);
         // FirstName Label
@@ -24,6 +24,8 @@ public class SignUPone extends JFrame implements ActionListener {
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
+        setLocation(450,100);
+        setTitle("REGISTRATION FORM");
         setLayout(null);
         setSize(800, 850);
         getContentPane().setBackground(Color.white);
