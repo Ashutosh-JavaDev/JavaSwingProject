@@ -40,16 +40,35 @@ public class SignUPone extends JFrame implements ActionListener {
         LastTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(LastTextField);
         // FatherName
-        FatherName = new JLabel("Last Name: ");
-        FatherName.setBounds(100,130,120,30);
+        FatherName = new JLabel("Father's Name: ");
+        FatherName.setBounds(100,190,120,30);
         FatherName.setFont(new Font("Josefin sans",Font.BOLD,20));
-        add(LastName);
+        add(FatherName);
         // TextField
         FatherTextField=new JTextField();
-        FatherTextField.setBounds(370,130,300,20);
+        FatherTextField.setBounds(370,190,300,20);
         FatherTextField.setFont(new Font("Outfit",Font.BOLD,20));
         add(LastTextField);
-        // 
+        // Email
+        Email = new JLabel("Eamil ID: ");
+        Email.setBounds(100,230,120,30);
+        Email.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(Email);
+        // TextField
+        EmailTextField=new JTextField();
+        EmailTextField.setBounds(370,230,300,20);
+        EmailTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(EmailTextField);
+        // Address
+        Address = new JLabel("Address: ");
+        Address.setBounds(100,290,120,30);
+        Address.setFont(new Font("Josefin sans",Font.BOLD,20));
+        add(Address);
+        // TextField
+        AddressTextField=new JTextField();
+        AddressTextField.setBounds(370,290,300,20);
+        AddressTextField.setFont(new Font("Outfit",Font.BOLD,20));
+        add(AddressTextField);
         next = new JButton("NEXT");
         next.setFont(new Font("Arial", Font.BOLD, 15));
         next.addActionListener(this);
