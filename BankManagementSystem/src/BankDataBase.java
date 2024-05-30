@@ -11,15 +11,15 @@ public class BankDataBase {
     Connection conn=null;
     Statement statem=null;
 
-    public BankDataBase() {
+    public BankDataBase() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/";
-            String database = "BankmanagementSystem";
+            String database = "Management";
             String username = "root";
             String password = "@Radhakrishna297";
             conn = DriverManager.getConnection(url, username, password);
-            statem=conn.createStatement();
+            statem = conn.createStatement();
         }
 
         catch (ClassNotFoundException e) {

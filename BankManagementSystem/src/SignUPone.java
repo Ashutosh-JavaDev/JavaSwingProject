@@ -188,7 +188,7 @@ public class SignUPone extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(rootPane, "Email Name Required");
             } else {
                 BankDataBase conn = new BankDataBase();
-                String query = "Insert into signUp values('" + formNo + "','" + fName + "','" + lName + "','" + Father
+                String query = "Insert into Signup values('" + formNo + "','" + fName + "','" + lName + "','" + Father
                         + "','" + city + "','" + state + "','" + Pincode + "','" + email + "')";
                 conn.statem.executeUpdate(query);
             }
