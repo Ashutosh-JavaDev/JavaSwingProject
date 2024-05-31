@@ -10,9 +10,10 @@ public class SignUptwo extends JFrame implements ActionListener {
 
             AddressTextField, CityTextField, StateTextField, PinTextField;
     JButton next;
-String formNo;
+    String formNo;
+
     public SignUptwo(String formNo) {
-        this.formNo=formNo;
+        this.formNo = formNo;
         // Random Number
         setTitle("Additional Details Page - 2 ");
         // FirstName Label
