@@ -87,7 +87,7 @@ public class SignUptwo extends JFrame implements ActionListener {
         add(AAdharTextField);
         // Gender
         Existing = new JLabel("Existing Account: ");
-        Existing.setBounds(100, 470, 120, 30);
+        Existing.setBounds(100, 470, 180, 30);
         Existing.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(Existing);
         // Button
@@ -182,7 +182,7 @@ public class SignUptwo extends JFrame implements ActionListener {
                     + "','" + soccuption + "','" + sincome + "','" + scitizen + "','" + sexistng + "','" + span + "','"
                     + saadhar + "')";
             conn.statem.executeUpdate(query);
-
+            JOptionPane.showMessageDialog(Pan, "Data Inserted");
         } catch (Exception e) {
             e.printStackTrace();
         }
