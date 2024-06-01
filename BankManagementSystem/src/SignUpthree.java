@@ -126,10 +126,11 @@ public class SignUpthree extends JFrame implements ActionListener {
         statement.setFont(new Font("Raleway", Font.BOLD, 15));
         add(statement);
         declare = new JCheckBox("I hereby declares that the above entered details are correct to the best of my knowledge");
-        declare.setBounds(350,470, 150, 20);
+        declare.setBounds(100,550, 700, 20);
         declare.setBackground(Color.WHITE);
         declare.setFont(new Font("Raleway", Font.BOLD, 15));
         add(declare);
+        // Button
         // Default Information
         setLayout(null);
         setLocation(450, 100);
