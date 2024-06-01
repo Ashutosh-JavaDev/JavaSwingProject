@@ -93,6 +93,7 @@ public class SignUpthree extends JFrame implements ActionListener {
         setLocation(450, 100);
         getContentPane().setBackground(Color.WHITE);
         setSize(800, 850);
+        setTitle("REGISTRATION FORM");
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }

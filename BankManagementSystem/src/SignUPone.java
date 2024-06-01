@@ -3,7 +3,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.*;
 import java.util.Random;
-import java.util.random.*;
 
 public class SignUPone extends JFrame implements ActionListener {
     JLabel FirstName, LastName, FatherName, DOB, Email, Gender, Address, Maratial, City, State, Pin;
