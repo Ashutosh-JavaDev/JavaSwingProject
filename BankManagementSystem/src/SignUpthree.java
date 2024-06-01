@@ -13,11 +13,21 @@ public class SignUpthree extends JFrame implements ActionListener {
     public SignUpthree(String formNo) {
         this.formNo = formNo;
         JLabel account=new JLabel("Page 3: Account Details");
-        account.setBounds(280,25,400,20);
+        account.setBounds(280,25,400,30);
         account.setFont(new Font("Raleway",Font.BOLD,20));
         add(account);
+        JLabel type=new JLabel("Account Type");
+        type.setBounds(100,80,100,20);
+        type.setFont(new Font("Raleway",Font.BOLD,20));
+        add(type);
+        saving=new JRadioButton("Saving Account");
+        saving.setBounds(100,90,100,20);
+        saving.setFont(new Font("Raleway",Font.BOLD,15));
+        add(saving);
+        //Default Information
         setLayout(null);
-        setSize(850,820);
+        setLocation(450, 100);
+        setSize(800,850);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
