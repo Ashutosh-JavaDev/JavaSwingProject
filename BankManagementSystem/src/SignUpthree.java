@@ -56,14 +56,26 @@ public class SignUpthree extends JFrame implements ActionListener {
         JLabel card = new JLabel("Card Number:");
         card.setBounds(100, 350, 150, 20);
         card.setBackground(Color.WHITE);
-        card.setFont(new Font("Raleway", Font.BOLD, 15));
+        card.setFont(new Font("Raleway", Font.BOLD, 20));
         add(card);
         // Card Number
         JLabel number = new JLabel("XXXX-XXXX-XXXX-2345");
         number.setBounds(350, 350, 550, 20);
         number.setBackground(Color.WHITE);
-        number.setFont(new Font("Raleway", Font.BOLD, 15));
+        number.setFont(new Font("Raleway", Font.BOLD, 20));
         add(number);
+        // PIN Number
+            JLabel pin = new JLabel("PIN");
+            pin.setBounds(100, 400, 90, 20);
+            pin.setBackground(Color.WHITE);
+            pin.setFont(new Font("Raleway", Font.BOLD, 20));
+            add(pin);
+            // Card Number
+            JLabel pnumber = new JLabel("XXXX");
+            pnumber.setBounds(350, 400, 120, 20);
+            pnumber.setBackground(Color.WHITE);
+            pnumber.setFont(new Font("Raleway", Font.BOLD, 20));
+            add(pnumber);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
