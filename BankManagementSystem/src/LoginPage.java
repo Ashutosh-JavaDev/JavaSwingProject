@@ -91,6 +91,6 @@ public class LoginPage extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        LoginPage ob = new LoginPage();
+         new LoginPage();
     }
 }
