@@ -36,7 +36,7 @@ public class SignUpthree extends JFrame implements ActionListener {
         add(fixed);
         // Current Button
         current = new JRadioButton("Current Account");
-        current.setBounds(100, 150, 150, 20);
+        current.setBounds(100, 150, 180, 20);
         current.setBackground(Color.WHITE);
         current.setFont(new Font("Raleway", Font.BOLD, 15));
         add(current);
@@ -52,6 +52,18 @@ public class SignUpthree extends JFrame implements ActionListener {
         group.add(fixed);
         group.add(current);
         group.add(Recurring);
+        // Card Number
+        JLabel card = new JLabel("Card Number:");
+        card.setBounds(100, 350, 150, 20);
+        card.setBackground(Color.WHITE);
+        card.setFont(new Font("Raleway", Font.BOLD, 15));
+        add(card);
+        // Card Number
+        JLabel number = new JLabel("XXXX-XXXX-XXXX-2345");
+        number.setBounds(350, 350, 550, 20);
+        number.setBackground(Color.WHITE);
+        number.setFont(new Font("Raleway", Font.BOLD, 15));
+        add(number);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
