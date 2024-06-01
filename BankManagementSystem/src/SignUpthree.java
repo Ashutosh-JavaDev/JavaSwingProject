@@ -46,6 +46,12 @@ public class SignUpthree extends JFrame implements ActionListener {
         Recurring.setBackground(Color.WHITE);
         Recurring.setFont(new Font("Raleway", Font.BOLD, 15));
         add(Recurring);
+        // ButtonGroup
+        ButtonGroup group=new ButtonGroup();
+        group.add(saving);
+        group.add(fixed);
+        group.add(current);
+        group.add(Recurring);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
