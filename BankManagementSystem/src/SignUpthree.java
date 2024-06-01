@@ -126,20 +126,20 @@ public class SignUpthree extends JFrame implements ActionListener {
         statement.setFont(new Font("Raleway", Font.BOLD, 15));
         add(statement);
         declare = new JCheckBox("I hereby declares that the above entered details are correct to the best of my knowledge");
-        declare.setBounds(100,550, 700, 20);
+        declare.setBounds(60,550, 750, 20);
         declare.setBackground(Color.WHITE);
         declare.setFont(new Font("Raleway", Font.BOLD, 15));
         add(declare);
         // Button
         submit=new JButton("Submit");
-        submit.setBounds(100,600, 100, 25);
+        submit.setBounds(100,600, 150, 25);
         submit.setBackground(Color.BLACK);
         submit.setForeground(Color.WHITE);
         submit.setFont(new Font("Raleway", Font.BOLD, 20));
         add(submit);
         submit.addActionListener(this);
         cancel=new JButton("Cancel");
-        cancel.setBounds(400,600, 100, 25);
+        cancel.setBounds(400,600, 150, 25);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         cancel.setFont(new Font("Raleway", Font.BOLD, 20));
