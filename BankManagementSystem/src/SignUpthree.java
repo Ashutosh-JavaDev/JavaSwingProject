@@ -173,7 +173,24 @@ public class SignUpthree extends JFrame implements ActionListener {
             String CardNumber = "" + Math.abs((random.nextLong() % 900000000L) + 5678984500000000L);
             String PinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000L);
             String facality="";
-            
+            if(ATM.isSelected()){
+                facality=facality+" ATM Card";
+            }
+            else if(internet.isSelected()){
+                facality=facality+" Internet Banking";
+            }
+            else if(mobile.isSelected()){
+                facality=facality+" Mobile  Banking";
+            }
+            else if(email.isSelected()){
+                facality=facality+" Email & SMS Alert";
+            }
+            else if(cheque.isSelected()){
+                facality=facality+" Cheque Book";
+            }
+            else if(statement.isSelected()){
+                facality=facality+"E-Statement";
+            }
         } else if (ae.getSource() == cancel) {
 
         }
