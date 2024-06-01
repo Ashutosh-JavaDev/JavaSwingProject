@@ -14,7 +14,10 @@ public class SignUptwo extends JFrame implements ActionListener {
     public SignUptwo(String formNo) {
         this.formNo = formNo;
         // Random Number
-        setTitle("Additional Details Page - 2 ");
+        JLabel label=new JLabel("Additional Details Page - 2 ");
+        setBounds(230,40,100,30);
+        setFont(new Font("Raleway",Font.BOLD,20));
+        add(label);
         // FirstName Label
         Religion = new JLabel("Religion: ");
         Religion.setBounds(100, 70, 130, 30);
