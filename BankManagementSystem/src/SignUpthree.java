@@ -188,7 +188,7 @@ public class SignUpthree extends JFrame implements ActionListener {
             }
             try{
                 BankDataBase conn=new BankDataBase();
-                String query1="insert into signupthree values('"+formNo+"','"+currentButton+"','"+CardNumber+"','"+PinNumber+"','"+facality+"')";
+                String query1="insert into signupthree values('"+formNo+"','"+CardNumber+"','"+PinNumber+"','"+facality+"','"+currentButton+"')";
                 String query2="insert into login values('"+formNo+"','"+CardNumber+"','"+PinNumber+"'')";
                 conn.statem.executeUpdate(query1);
                 conn.statem.executeUpdate(query2);
