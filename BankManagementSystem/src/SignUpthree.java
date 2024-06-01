@@ -7,7 +7,7 @@ import java.util.random.RandomGenerator;
 
 public class SignUpthree extends JFrame implements ActionListener {
     JRadioButton saving, current, fixed, Recurring;
-    JCheckBox ATM, internet, mobile, email, cheque, statement;
+    JCheckBox ATM, internet, mobile, email, cheque, declare,statement;
     JButton submit, cancel;
     String formNo;
 
@@ -125,6 +125,11 @@ public class SignUpthree extends JFrame implements ActionListener {
         statement.setBackground(Color.WHITE);
         statement.setFont(new Font("Raleway", Font.BOLD, 15));
         add(statement);
+        declare = new JCheckBox("I hereby declares that the above entered details are correct to the best of my knowledge");
+        declare.setBounds(350,470, 150, 20);
+        declare.setBackground(Color.WHITE);
+        declare.setFont(new Font("Raleway", Font.BOLD, 15));
+        add(declare);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
