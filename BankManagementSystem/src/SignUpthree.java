@@ -156,7 +156,12 @@ public class SignUpthree extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource()==submit){
+            
+        }
+        else if(ae.getSource()==cancel){
 
+        }
     }
 
     public static void main(String[] args) {
