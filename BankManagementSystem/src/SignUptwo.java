@@ -182,7 +182,8 @@ public class SignUptwo extends JFrame implements ActionListener {
                     + "','" + soccuption + "','" + sincome + "','" + scitizen + "','" + sexistng + "','" + span + "','"
                     + saadhar + "')";
             conn.statem.executeUpdate(query);
-            JOptionPane.showMessageDialog(Pan, "Data Inserted");
+           setVisible(false);
+           new SignUpthree(formNo).setVisible(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
