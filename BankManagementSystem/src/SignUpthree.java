@@ -132,11 +132,17 @@ public class SignUpthree extends JFrame implements ActionListener {
         add(declare);
         // Button
         submit=new JButton("Submit");
-        submit.setBounds(100,550, 700, 20);
+        submit.setBounds(100,600, 100, 25);
         submit.setBackground(Color.BLACK);
         submit.setForeground(Color.WHITE);
-        submit.setFont(new Font("Raleway", Font.BOLD, 15));
+        submit.setFont(new Font("Raleway", Font.BOLD, 20));
         add(submit);
+        cancel=new JButton("Cancel");
+        cancel.setBounds(400,600, 100, 25);
+        cancel.setBackground(Color.BLACK);
+        cancel.setForeground(Color.WHITE);
+        cancel.setFont(new Font("Raleway", Font.BOLD, 20));
+        add(cancel);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
