@@ -47,7 +47,7 @@ public class SignUpthree extends JFrame implements ActionListener {
         Recurring.setFont(new Font("Raleway", Font.BOLD, 15));
         add(Recurring);
         // ButtonGroup
-        ButtonGroup group=new ButtonGroup();
+        ButtonGroup group = new ButtonGroup();
         group.add(saving);
         group.add(fixed);
         group.add(current);
@@ -65,17 +65,17 @@ public class SignUpthree extends JFrame implements ActionListener {
         number.setFont(new Font("Raleway", Font.BOLD, 20));
         add(number);
         // PIN Number
-            JLabel pin = new JLabel("PIN");
-            pin.setBounds(100, 400, 90, 20);
-            pin.setBackground(Color.WHITE);
-            pin.setFont(new Font("Raleway", Font.BOLD, 20));
-            add(pin);
-            // Card Number
-            JLabel pnumber = new JLabel("XXXX");
-            pnumber.setBounds(350, 400, 120, 20);
-            pnumber.setBackground(Color.WHITE);
-            pnumber.setFont(new Font("Raleway", Font.BOLD, 20));
-            add(pnumber);
+        JLabel pin = new JLabel("PIN");
+        pin.setBounds(100, 400, 90, 20);
+        pin.setBackground(Color.WHITE);
+        pin.setFont(new Font("Raleway", Font.BOLD, 20));
+        add(pin);
+        // Pin Number
+        JLabel pnumber = new JLabel("XXXX");
+        pnumber.setBounds(350, 400, 120, 20);
+        pnumber.setBackground(Color.WHITE);
+        pnumber.setFont(new Font("Raleway", Font.BOLD, 20));
+        add(pnumber);
         // Default Information
         setLayout(null);
         setLocation(450, 100);
