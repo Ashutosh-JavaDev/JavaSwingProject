@@ -24,7 +24,7 @@ public class SignUptwo extends JFrame implements ActionListener {
         Religion.setFont(new Font("Josefin sans", Font.BOLD, 20));
         add(Religion);
         // TextField
-        String Dharam[] = { "Sanatan", "Muslim", "Sikh", "Christian", "Other" };
+        String Dharam[] = { "Sanatani", "Muslim", "Sikh", "Christian", "Other" };
         creligion = new JComboBox(Dharam);
         creligion.setBounds(370, 70, 300, 30);
         creligion.setFont(new Font("Outfit", Font.BOLD, 20));

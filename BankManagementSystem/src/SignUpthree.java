@@ -190,9 +190,9 @@ public class SignUpthree extends JFrame implements ActionListener {
                     JOptionPane.showMessageDialog(null, "Choose Account Type");
                 } else {
                     BankDataBase conn = new BankDataBase();
-                    String query1 = "insert into signupthree values('" + formNo + "','" + CardNumber + "','" + PinNumber
+                    String query1 = "Insert into signupthree values('" + formNo + "','" + CardNumber + "','" + PinNumber
                             + "','" + facality + "','" + currentButton + "')";
-                    String query2 = "insert into login values('" + formNo + "','" + CardNumber + "','" + PinNumber
+                    String query2 = "Insert into login values('" + formNo + "','" + CardNumber + "','" + PinNumber
                             + "')";
                     conn.statem.executeUpdate(query1);
                     JOptionPane.showMessageDialog(null, "Card Number: " + CardNumber + "\nPIN: " + PinNumber);
