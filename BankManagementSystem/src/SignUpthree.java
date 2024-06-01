@@ -187,7 +187,11 @@ public class SignUpthree extends JFrame implements ActionListener {
                 facality = facality + "E-Statement";
             }
             try{
+                BankDataBase conn=new BankDataBase();
                 String query1="insert into signupthree values('"+formNo+"','"+currentButton+"','"+CardNumber+"','"+PinNumber+"','"+facality+"')";
+                String query2="insert into login values('"+formNo+"','"+CardNumber+"','"+PinNumber+"'')";
+                conn.statem.executeUpdate(query1);
+                conn.statem.executeUpdate(query2);
             }catch(Exception e){
                 e.printStackTrace();
             }
