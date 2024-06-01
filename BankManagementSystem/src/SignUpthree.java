@@ -186,13 +186,19 @@ public class SignUpthree extends JFrame implements ActionListener {
             } else if (statement.isSelected()) {
                 facality = facality + "E-Statement";
             }
-            try{
-                BankDataBase conn=new BankDataBase();
-                String query1="insert into signupthree values('"+formNo+"','"+CardNumber+"','"+PinNumber+"','"+facality+"','"+currentButton+"')";
-                String query2="insert into login values('"+formNo+"','"+CardNumber+"','"+PinNumber+"'')";
-                conn.statem.executeUpdate(query1);
-                conn.statem.executeUpdate(query2);
-            }catch(Exception e){
+            try {
+                if (currentButton.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Choose Account Type");
+                } else {
+                    BankDataBase conn = new BankDataBase();
+                    String query1 = "insert into signupthree values('" + formNo + "','" + CardNumber + "','" + PinNumber
+                            + "','" + facality + "','" + currentButton + "')";
+                    String query2 = "insert into login values('" + formNo + "','" + CardNumber + "','" + PinNumber
+                            + "'')";
+                    conn.statem.executeUpdate(query1);
+                    conn.statem.executeUpdate(query2);
+                }
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         } else if (ae.getSource() == cancel) {
