@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.ActionListener;
+import java.awt.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.util.random.RandomGenerator;
@@ -23,27 +24,28 @@ public class SignUpthree extends JFrame implements ActionListener {
         add(type);
         // Saving Button
         saving=new JRadioButton("Saving Account");
-        saving.setBounds(100,90,100,20);
+        saving.setBounds(100,120,150,20);
         saving.setFont(new Font("Raleway",Font.BOLD,15));
         add(saving);
          // Fixed Button
          fixed=new JRadioButton("Fixed Account");
-         fixed.setBounds(150,90,100,20);
+         fixed.setBounds(150,120,150,20);
          fixed.setFont(new Font("Raleway",Font.BOLD,15));
          add(fixed); 
          // Current Button
          current=new JRadioButton("Current Account");
-         current.setBounds(100,130,100,20);
+         current.setBounds(100,150,150,20);
          current.setFont(new Font("Raleway",Font.BOLD,15));
          add(current); 
          // Deposite Button
          Recurring=new JRadioButton("Reccuring Deposite Account");
-         Recurring.setBounds(150,130,200,20);
+         Recurring.setBounds(150,150,300,20);
          Recurring.setFont(new Font("Raleway",Font.BOLD,15));
          add(Recurring);
         //Default Information
         setLayout(null);
         setLocation(450, 100);
+        getContentPane().setBackground(Color.WHITE);
         setSize(800,850);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
