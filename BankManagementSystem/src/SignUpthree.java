@@ -54,25 +54,37 @@ public class SignUpthree extends JFrame implements ActionListener {
         group.add(Recurring);
         // Card Number
         JLabel card = new JLabel("Card Number:");
-        card.setBounds(100, 350, 150, 20);
+        card.setBounds(100,220, 150, 20);
         card.setBackground(Color.WHITE);
         card.setFont(new Font("Raleway", Font.BOLD, 20));
         add(card);
+        // 16 digit
+        JLabel digit = new JLabel("Your 16 Digit Card Number");
+        digit.setBounds(100,250, 150, 10);
+        digit.setBackground(Color.WHITE);
+        digit.setFont(new Font("Raleway", Font.BOLD, 10));
+        add(digit);
         // Card Number
         JLabel number = new JLabel("XXXX-XXXX-XXXX-2345");
-        number.setBounds(350, 350, 550, 20);
+        number.setBounds(350, 220, 550, 20);
         number.setBackground(Color.WHITE);
         number.setFont(new Font("Raleway", Font.BOLD, 20));
         add(number);
         // PIN Number
-        JLabel pin = new JLabel("PIN");
-        pin.setBounds(100, 400, 90, 20);
+        JLabel pin = new JLabel("PIN:");
+        pin.setBounds(100, 280, 90, 20);
         pin.setBackground(Color.WHITE);
         pin.setFont(new Font("Raleway", Font.BOLD, 20));
         add(pin);
+        // 4 digit pin
+        JLabel pinDigit = new JLabel("Your 4 Digit PIN Number");
+        pinDigit.setBounds(100,300, 150, 10);
+        pinDigit.setBackground(Color.WHITE);
+        pinDigit.setFont(new Font("Raleway", Font.BOLD, 10));
+        add(pinDigit);
         // Pin Number
         JLabel pnumber = new JLabel("XXXX");
-        pnumber.setBounds(350, 400, 120, 20);
+        pnumber.setBounds(350, 280, 120, 20);
         pnumber.setBackground(Color.WHITE);
         pnumber.setFont(new Font("Raleway", Font.BOLD, 20));
         add(pnumber);
