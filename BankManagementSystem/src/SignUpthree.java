@@ -3,11 +3,12 @@ import java.awt.event.ActionListener;
 import java.awt.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
+import java.util.Random;
 import java.util.random.RandomGenerator;
 
 public class SignUpthree extends JFrame implements ActionListener {
     JRadioButton saving, current, fixed, Recurring;
-    JCheckBox ATM, internet, mobile, email, cheque, declare,statement;
+    JCheckBox ATM, internet, mobile, email, cheque, declare, statement;
     JButton submit, cancel;
     String formNo;
 
@@ -54,13 +55,13 @@ public class SignUpthree extends JFrame implements ActionListener {
         group.add(Recurring);
         // Card Number
         JLabel card = new JLabel("Card Number:");
-        card.setBounds(100,220, 150, 20);
+        card.setBounds(100, 220, 150, 20);
         card.setBackground(Color.WHITE);
         card.setFont(new Font("Raleway", Font.BOLD, 20));
         add(card);
         // 16 digit
         JLabel digit = new JLabel("Your 16 Digit Card Number");
-        digit.setBounds(100,250, 150, 10);
+        digit.setBounds(100, 250, 150, 10);
         digit.setBackground(Color.WHITE);
         digit.setFont(new Font("Raleway", Font.BOLD, 10));
         add(digit);
@@ -78,7 +79,7 @@ public class SignUpthree extends JFrame implements ActionListener {
         add(pin);
         // 4 digit pin
         JLabel pinDigit = new JLabel("Your 4 Digit PIN Number");
-        pinDigit.setBounds(100,300, 150, 10);
+        pinDigit.setBounds(100, 300, 150, 10);
         pinDigit.setBackground(Color.WHITE);
         pinDigit.setFont(new Font("Raleway", Font.BOLD, 10));
         add(pinDigit);
@@ -104,9 +105,9 @@ public class SignUpthree extends JFrame implements ActionListener {
         internet.setBounds(350, 390, 200, 20);
         internet.setBackground(Color.WHITE);
         internet.setFont(new Font("Raleway", Font.BOLD, 15));
-        add(internet);  
+        add(internet);
         mobile = new JCheckBox("Mobile Banking");
-        mobile.setBounds(100,430,150, 20);
+        mobile.setBounds(100, 430, 150, 20);
         mobile.setBackground(Color.WHITE);
         mobile.setFont(new Font("Raleway", Font.BOLD, 15));
         add(mobile);
@@ -114,32 +115,33 @@ public class SignUpthree extends JFrame implements ActionListener {
         email.setBounds(350, 430, 250, 20);
         email.setBackground(Color.WHITE);
         email.setFont(new Font("Raleway", Font.BOLD, 15));
-        add(email);  
+        add(email);
         cheque = new JCheckBox("Cheque Book");
-        cheque.setBounds(100,470, 150, 20);
+        cheque.setBounds(100, 470, 150, 20);
         cheque.setBackground(Color.WHITE);
         cheque.setFont(new Font("Raleway", Font.BOLD, 15));
-        add(cheque); 
+        add(cheque);
         statement = new JCheckBox("E-Statement");
-        statement.setBounds(350,470, 150, 20);
+        statement.setBounds(350, 470, 150, 20);
         statement.setBackground(Color.WHITE);
         statement.setFont(new Font("Raleway", Font.BOLD, 15));
         add(statement);
-        declare = new JCheckBox("I hereby declares that the above entered details are correct to the best of my knowledge");
-        declare.setBounds(60,550, 750, 20);
+        declare = new JCheckBox(
+                "I hereby declares that the above entered details are correct to the best of my knowledge");
+        declare.setBounds(60, 550, 750, 20);
         declare.setBackground(Color.WHITE);
         declare.setFont(new Font("Raleway", Font.BOLD, 15));
         add(declare);
         // Button
-        submit=new JButton("Submit");
-        submit.setBounds(100,600, 150, 25);
+        submit = new JButton("Submit");
+        submit.setBounds(100, 600, 150, 25);
         submit.setBackground(Color.BLACK);
         submit.setForeground(Color.WHITE);
         submit.setFont(new Font("Raleway", Font.BOLD, 20));
         add(submit);
         submit.addActionListener(this);
-        cancel=new JButton("Cancel");
-        cancel.setBounds(400,600, 150, 25);
+        cancel = new JButton("Cancel");
+        cancel.setBounds(400, 600, 150, 25);
         cancel.setBackground(Color.BLACK);
         cancel.setForeground(Color.WHITE);
         cancel.setFont(new Font("Raleway", Font.BOLD, 20));
@@ -156,10 +158,22 @@ public class SignUpthree extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==submit){
-            
-        }
-        else if(ae.getSource()==cancel){
+        if (ae.getSource() == submit) {
+            String currentButton = null;
+            if (saving.isSelected()) {
+                currentButton = "Saving Acccount";
+            } else if (fixed.isSelected()) {
+                currentButton = "Fixed Acccount";
+            } else if (current.isSelected()) {
+                currentButton = "Current Acccount";
+            } else if (Recurring.isSelected()) {
+                currentButton = "Recurring Deposite Acccount";
+            }
+            Random random = new Random();
+            String CardNumber = "" + Math.abs((random.nextLong() % 900000000L) + 5678984500000000L);
+            String PinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000L);
+
+        } else if (ae.getSource() == cancel) {
 
         }
     }
