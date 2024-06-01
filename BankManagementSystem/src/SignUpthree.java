@@ -4,7 +4,6 @@ import java.awt.*;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.util.Random;
-import java.util.random.RandomGenerator;
 
 public class SignUpthree extends JFrame implements ActionListener {
     JRadioButton saving, current, fixed, Recurring;
@@ -194,8 +193,9 @@ public class SignUpthree extends JFrame implements ActionListener {
                     String query1 = "insert into signupthree values('" + formNo + "','" + CardNumber + "','" + PinNumber
                             + "','" + facality + "','" + currentButton + "')";
                     String query2 = "insert into login values('" + formNo + "','" + CardNumber + "','" + PinNumber
-                            + "'')";
+                            + "')";
                     conn.statem.executeUpdate(query1);
+                    JOptionPane.showMessageDialog(null, "Card Number: " + CardNumber + "\nPIN: " + PinNumber);
                     conn.statem.executeUpdate(query2);
                 }
             } catch (Exception e) {
