@@ -29,7 +29,7 @@ public class SignUpthree extends JFrame implements ActionListener {
         add(saving);
          // Fixed Button
          fixed=new JRadioButton("Fixed Account");
-         fixed.setBounds(250,120,150,20);
+         fixed.setBounds(350,120,150,20);
          fixed.setFont(new Font("Raleway",Font.BOLD,15));
          add(fixed); 
          // Current Button
@@ -39,7 +39,7 @@ public class SignUpthree extends JFrame implements ActionListener {
          add(current); 
          // Deposite Button
          Recurring=new JRadioButton("Reccuring Deposite Account");
-         Recurring.setBounds(250,150,300,20);
+         Recurring.setBounds(350,150,300,20);
          Recurring.setFont(new Font("Raleway",Font.BOLD,15));
          add(Recurring);
         //Default Information
