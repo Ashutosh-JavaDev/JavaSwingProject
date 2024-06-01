@@ -22,6 +22,10 @@ public class SignUPone extends JFrame implements ActionListener {
         form.setBounds(250, 10, 400, 35);
         form.setFont(new Font("Rubik", Font.BOLD, 30));
         add(form);
+        JLabel data = new JLabel("Personal Details Page - 1 ");
+        data.setBounds(350,40, 600, 30);
+        data.setFont(new Font("Arial", Font.BOLD, 10));
+        add(data);
         // FirstName Label
         FirstName = new JLabel("First Name: ");
         FirstName.setBounds(100, 70, 130, 30);

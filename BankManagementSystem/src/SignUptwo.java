@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.*;
 
 public class SignUptwo extends JFrame implements ActionListener {
-    JLabel Religion, Category, Occuption, Education, Income, Citizen, Existing, Pan, Aaddhar;
+    JLabel label, Religion, Category, Occuption, Education, Income, Citizen, Existing, Pan, Aaddhar;
     JRadioButton syes, sno, eyes, eno;
     JTextField PanTextField, AAdharTextField;
     JComboBox creligion, ccategory, coccuption, ceducation, cincome;
@@ -14,9 +14,9 @@ public class SignUptwo extends JFrame implements ActionListener {
     public SignUptwo(String formNo) {
         this.formNo = formNo;
         // Random Number
-        JLabel label=new JLabel("Additional Details Page - 2 ");
-        setBounds(230,40,100,30);
-        setFont(new Font("Raleway",Font.BOLD,20));
+        label = new JLabel("Additional Details Page - 2 ");
+        label.setBounds(280, 20, 600, 30);
+        label.setFont(new Font("Arial", Font.BOLD, 20));
         add(label);
         // FirstName Label
         Religion = new JLabel("Religion: ");
@@ -181,12 +181,13 @@ public class SignUptwo extends JFrame implements ActionListener {
         try {
 
             BankDataBase conn = new BankDataBase();
-            String query = "Insert into Signuptwo values('" + formNo + "','" + sreligion + "','" + scategory + "','" + seducation
+            String query = "Insert into Signuptwo values('" + formNo + "','" + sreligion + "','" + scategory + "','"
+                    + seducation
                     + "','" + soccuption + "','" + sincome + "','" + scitizen + "','" + sexistng + "','" + span + "','"
                     + saadhar + "')";
             conn.statem.executeUpdate(query);
-           setVisible(false);
-           new SignUpthree(formNo).setVisible(true);
+            setVisible(false);
+            new SignUpthree(formNo).setVisible(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
