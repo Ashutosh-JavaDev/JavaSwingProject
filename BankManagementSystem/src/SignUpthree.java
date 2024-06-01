@@ -170,7 +170,7 @@ public class SignUpthree extends JFrame implements ActionListener {
             }
             Random random = new Random();
             String CardNumber = "" + Math.abs((random.nextLong() % 900000000L) + 5678984500000000L);
-            String PinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000L);
+            String PinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000);
             String facality = "";
             if (ATM.isSelected()) {
                 facality = facality + " ATM Card";
