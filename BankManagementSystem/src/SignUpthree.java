@@ -186,6 +186,11 @@ public class SignUpthree extends JFrame implements ActionListener {
             } else if (statement.isSelected()) {
                 facality = facality + "E-Statement";
             }
+            try{
+                String query1="insert into signupthree values('"+formNo+"','"+currentButton+"','"+CardNumber+"','"+PinNumber+"','"+facality+"')";
+            }catch(Exception e){
+                e.printStackTrace();
+            }
         } else if (ae.getSource() == cancel) {
 
         }
