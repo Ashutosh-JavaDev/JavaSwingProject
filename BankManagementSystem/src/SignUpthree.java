@@ -173,17 +173,22 @@ public class SignUpthree extends JFrame implements ActionListener {
             String PinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000);
             String facality = "";
             if (ATM.isSelected()) {
-                facality = facality + " ATM Card";
-            } else if (internet.isSelected()) {
-                facality = facality + " Internet Banking";
-            } else if (mobile.isSelected()) {
-                facality = facality + " Mobile  Banking";
-            } else if (email.isSelected()) {
-                facality = facality + " Email & SMS Alert";
-            } else if (cheque.isSelected()) {
-                facality = facality + " Cheque Book";
-            } else if (statement.isSelected()) {
-                facality = facality + "E-Statement";
+                facality = facality + " ATM Card,";
+            }
+            if (internet.isSelected()) {
+                facality = facality + " Internet Banking,";
+            }
+            if (mobile.isSelected()) {
+                facality = facality + " Mobile Banking,";
+            }
+            if (email.isSelected()) {
+                facality = facality + " Email & SMS Alert,";
+            }
+            if (cheque.isSelected()) {
+                facality = facality + " Cheque Book,";
+            }
+            if (statement.isSelected()) {
+                facality = facality + "E-Statement,";
             }
             try {
                 if (currentButton.equals("")) {
