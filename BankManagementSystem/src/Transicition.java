@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 public class Transicition extends JFrame implements ActionListener {
     public Transicition(){
-        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icon/ATM.jpg"));
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icons/ATM.jpg"));
         Image i2=i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
         JLabel imagelabel=new JLabel(i3);
