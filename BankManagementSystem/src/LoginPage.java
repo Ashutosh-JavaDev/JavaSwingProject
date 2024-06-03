@@ -78,6 +78,8 @@ public class LoginPage extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == sign) {
+            String cardnumber=cardField.getText();;
+            String pinnumber=pinField.getText();
 
         } else if (ae.getSource() == Clear) {
             String card = "";
