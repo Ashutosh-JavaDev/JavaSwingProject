@@ -14,8 +14,9 @@ public class Transicition extends JFrame implements ActionListener {
         add(label);
         // Select Option
         JLabel text=new JLabel("Please Select the Option");
-        text.setBounds(450,150,100,30);
-        add(text);
+        text.setBounds(850,50,200,30);
+        label.add(text);
+        setForeground(Color.WHITE);
         setLayout(null);
         getContentPane().setBackground(Color.white);
         setSize(900, 900);
