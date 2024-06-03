@@ -1,4 +1,8 @@
 import javax.swing.*;
+
+import com.mysql.cj.protocol.Resultset;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -78,9 +82,24 @@ public class LoginPage extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == sign) {
-            String cardnumber=cardField.getText();;
-            String pinnumber=pinField.getText();
 
+            String cardnumber = cardField.getText();
+            String pinnumber = pinField.getText();
+            String query = "select *from login where CardNumber ='" + cardnumber + "'and PinNumber = '" + pinnumber
+                    + "'";
+            try {
+                BankDataBase conn = new BankDataBase();
+                ResultSet res = conn.statem.executeQuery(query);
+                if (res.next()) {
+                    setVisible(false);
+                    new Transicition().setVisible(true);
+                } else {
+                    JOptionPane.showMessageDialog(rootPane, "Card Number or Pin not Matched");
+                    ae.setSource(Clear);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         } else if (ae.getSource() == Clear) {
             String card = "";
             cardField.setText(card);
@@ -93,6 +112,6 @@ public class LoginPage extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-         new LoginPage();
+        new LoginPage();
     }
 }
