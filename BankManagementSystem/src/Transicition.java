@@ -51,7 +51,7 @@ public class Transicition extends JFrame implements ActionListener {
         changepin.setFont(new Font("Roboto", Font.BOLD, 15));
         changepin.setForeground(Color.WHITE);
         add(changepin);
-        exit = new JButton("Deposite Cash");
+        exit = new JButton("EXIT");
         exit.setBackground(Color.black);
         exit.setBounds(230, 550, 100, 30);
         exit.setFont(new Font("Roboto", Font.BOLD, 15));
