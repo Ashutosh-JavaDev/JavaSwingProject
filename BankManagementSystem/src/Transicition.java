@@ -75,7 +75,9 @@ public class Transicition extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-
+        if(ae.getSource()==exit){
+            System.exit(0);
+        }
     }
 
     public static void main(String[] args) {
