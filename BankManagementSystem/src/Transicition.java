@@ -24,9 +24,15 @@ public class Transicition extends JFrame implements ActionListener {
         fast = new JButton("Fast Cash");
         fast.setBackground(Color.black);
         fast.setBounds(160, 450, 100, 30);
-        text.setFont(new Font("Roboto", Font.BOLD, 15));
-        text.setForeground(Color.WHITE);
+        fast.setFont(new Font("Roboto", Font.BOLD, 15));
+        fast.setForeground(Color.WHITE);
         add(fast);
+        deposite = new JButton("Deposite Cash");
+        deposite.setBackground(Color.black);
+        deposite.setBounds(230, 450, 100, 30);
+        deposite.setFont(new Font("Roboto", Font.BOLD, 15));
+        deposite.setForeground(Color.WHITE);
+        add(deposite);
         // Default
         setLayout(null);
         getContentPane().setBackground(Color.white);
