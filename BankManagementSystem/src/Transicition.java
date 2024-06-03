@@ -4,7 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Transicition extends JFrame implements ActionListener {
-    JButton fast,deposite,withdraw,balance,exit,changepin;
+    JButton fast, deposite, withdraw, balance, exit, changepin;
+
     public Transicition() {
 
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
@@ -14,15 +15,17 @@ public class Transicition extends JFrame implements ActionListener {
         label.setBounds(0, 0, 900, 900);
         add(label);
         // Select Option
-        JLabel text=new JLabel("Please Select the Option");
-        text.setBounds(230,320,200,30);
+        JLabel text = new JLabel("Please Select the Option");
+        text.setBounds(230, 320, 200, 30);
         label.add(text);
-        text.setFont(new Font("Roboto",Font.BOLD,15));
+        text.setFont(new Font("Roboto", Font.BOLD, 15));
         text.setForeground(Color.WHITE);
         // Button
-        fast=new JButton("Fast Cash");
+        fast = new JButton("Fast Cash");
         fast.setBackground(Color.black);
-        fast.setBounds(160,450,100,30);
+        fast.setBounds(160, 450, 100, 30);
+        text.setFont(new Font("Roboto", Font.BOLD, 15));
+        text.setForeground(Color.WHITE);
         add(fast);
         // Default
         setLayout(null);
