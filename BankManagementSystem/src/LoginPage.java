@@ -92,7 +92,7 @@ public class LoginPage extends JFrame implements ActionListener {
                 ResultSet res = conn.statem.executeQuery(query);
                 if (res.next()) {
                     setVisible(false);
-                    new Transicition().setVisible(true);
+                    new Transicition(pinField).setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(rootPane, "Card Number or Pin not Matched");
                     ae.setSource(Clear);

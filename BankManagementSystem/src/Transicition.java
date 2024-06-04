@@ -5,9 +5,9 @@ import java.awt.event.ActionListener;
 
 public class Transicition extends JFrame implements ActionListener {
     JButton fast, deposite, withdraw, balance, exit, changepin;
-
-    public Transicition() {
-
+    String pinField;
+    public Transicition(String pinField) {
+        this.pinField=pinField;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
@@ -23,42 +23,42 @@ public class Transicition extends JFrame implements ActionListener {
         // Button
         fast = new JButton("Fast Cash");
         fast.setBackground(Color.black);
-        fast.setBounds(155,450, 150,30);
+        fast.setBounds(155, 450, 150, 30);
         fast.setFont(new Font("Roboto", Font.BOLD, 15));
         fast.setForeground(Color.WHITE);
         label.add(fast);
         fast.addActionListener(this);
         deposite = new JButton("Deposite Cash");
         deposite.setBackground(Color.black);
-        deposite.setBounds(365,450, 150,30);
+        deposite.setBounds(365, 450, 150, 30);
         deposite.setFont(new Font("Roboto", Font.BOLD, 15));
         deposite.setForeground(Color.WHITE);
         label.add(deposite);
         deposite.addActionListener(this);
         withdraw = new JButton("Withdraw Cash");
         withdraw.setBackground(Color.black);
-        withdraw.setBounds(155,490, 150,30);
+        withdraw.setBounds(155, 490, 150, 30);
         withdraw.setFont(new Font("Roboto", Font.BOLD, 15));
         withdraw.setForeground(Color.WHITE);
         label.add(withdraw);
         withdraw.addActionListener(this);
         balance = new JButton("Chack Balance");
         balance.setBackground(Color.black);
-        balance.setBounds(365,490, 150,30);
+        balance.setBounds(365, 490, 150, 30);
         balance.setFont(new Font("Roboto", Font.BOLD, 15));
         balance.setForeground(Color.WHITE);
         label.add(balance);
         balance.addActionListener(this);
         changepin = new JButton("Change PIN");
         changepin.setBackground(Color.black);
-        changepin.setBounds(155,530, 150,30);
+        changepin.setBounds(155, 530, 150, 30);
         changepin.setFont(new Font("Roboto", Font.BOLD, 15));
         changepin.setForeground(Color.WHITE);
         label.add(changepin);
         changepin.addActionListener(this);
         exit = new JButton("EXIT");
         exit.setBackground(Color.black);
-        exit.setBounds(365, 530, 150,30);
+        exit.setBounds(365, 530, 150, 30);
         exit.setFont(new Font("Roboto", Font.BOLD, 15));
         exit.setForeground(Color.WHITE);
         label.add(exit);
@@ -75,12 +75,15 @@ public class Transicition extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==exit){
+        if (ae.getSource() == exit) {
             System.exit(0);
+        } else if (ae.getSource() == deposite) {
+            setVisible(false);
+            new Deposite(pinField).setVisible(true);
         }
     }
 
     public static void main(String[] args) {
-        new Transicition();
+        new Transicition("");
     }
 }
