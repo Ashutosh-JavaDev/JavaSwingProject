@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.sql.SQLException;
-// import java.sql.*;
+import java.util.Date;
 
 public class Deposite extends JFrame implements ActionListener {
     String pinnumber;
@@ -55,6 +55,9 @@ public class Deposite extends JFrame implements ActionListener {
         if(ae.getSource()==deposit){
             try{
                 BankDataBase conn=new BankDataBase();
+                String amt=amount.getText();
+                Date date=new Date();
+                String query="insert into bankDepo values('"+pinnumber+"','"+date+"','Deposit','"+amt+"')";
             }
             catch(SQLException e){
                 e.printStackTrace();
