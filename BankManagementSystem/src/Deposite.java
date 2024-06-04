@@ -16,10 +16,10 @@ public class Deposite extends JFrame implements ActionListener {
         JLabel image = new JLabel(i3);
         image.setBounds(0,0,900,900);
         add(image);
-        JLabel text = new JLabel("Plese enter the Amount want to Deposit");
-        text.setBounds(155, 300, 400, 25);
+        JLabel text = new JLabel("Please enter the Amount want to Deposit");
+        text.setBounds(155,300, 400, 25);
         text.setForeground(Color.white);
-        text.setFont(new Font("System", Font.BOLD, 16));
+        text.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(text);
         // Default
         setLayout(null);
