@@ -10,6 +10,12 @@ public class Deposite extends JFrame implements ActionListener {
 
     public Deposite(String pinnumber) {
         this.pinnumber = pinnumber;
+        setLayout(null);
+        setSize(900,900);
+        setLocation(300,0);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setUndecorated(false);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent ae) {
