@@ -12,8 +12,8 @@ public class Deposite extends JFrame implements ActionListener {
         this.pinnumber = pinnumber;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
-        ImageIcon i3=new ImageIcon(i2);
-        JLabel image=new JLabel(i3);
+        ImageIcon i3 = new ImageIcon(i2);
+        JLabel image = new JLabel(i3);
         JLabel text = new JLabel("Plese enter the Amount want to Deposit");
         setBounds(155, 300, 400, 25);
         setFont(new Font("System", Font.BOLD, 16));
