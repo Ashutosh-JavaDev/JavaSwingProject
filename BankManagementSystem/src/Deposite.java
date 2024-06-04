@@ -53,14 +53,21 @@ public class Deposite extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource()==deposit){
-            try{
-                BankDataBase conn=new BankDataBase();
-                String amt=amount.getText();
-                Date date=new Date();
-                String query="insert into bankDepo values('"+pinnumber+"','"+date+"','Deposit','"+amt+"')";
+            String amt=amount.getText();
+
+            if(amt.equals("")){
+                JOptionPane.showMessageDialog(rootPane, "First enter the Amount you want to Deposit");
             }
-            catch(SQLException e){
-                e.printStackTrace();
+            else{
+                try{
+                    BankDataBase conn=new BankDataBase();
+                    Date date=new Date();
+                    String query="insert into bankDepo values('"+pinnumber+"','"+date+"','Deposit','"+amt+"')";
+                    conn.statem.executeUpdate(query);
+                }
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
             }
         }
         else if(ae.getSource()==exit){
