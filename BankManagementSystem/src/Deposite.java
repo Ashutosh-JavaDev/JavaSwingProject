@@ -38,7 +38,7 @@ public class Deposite extends JFrame implements ActionListener {
         exit.setBounds(415,565,100, 25);
         // deposit.setForeground(Color.red);
         exit.setFont(new Font("Arial", Font.BOLD, 16));
-        deposit.addActionListener(this);
+        exit.addActionListener(this);
         image.add(exit);
         // Default
         setLayout(null);
@@ -53,7 +53,7 @@ public class Deposite extends JFrame implements ActionListener {
         if(ae.getSource()==deposit){
 
         }
-        if(ae.getSource()==exit){
+        else if(ae.getSource()==exit){
             setVisible(false);
             new Transicition(pinnumber).setVisible(true);
         }
