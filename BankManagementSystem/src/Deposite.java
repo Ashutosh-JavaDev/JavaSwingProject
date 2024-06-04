@@ -10,6 +10,11 @@ public class Deposite extends JFrame implements ActionListener {
 
     public Deposite(String pinnumber) {
         this.pinnumber = pinnumber;
+        JLabel text=new JLabel("Plese enter the Amount want to Deposit");
+        setBounds(155,300,400,25);
+        setFont(new Font("System",Font.BOLD,16));
+        
+        // Default
         setLayout(null);
         setSize(900,900);
         setLocation(300,0);
