@@ -5,9 +5,9 @@ import java.awt.event.ActionListener;
 
 public class Transicition extends JFrame implements ActionListener {
     JButton fast, deposite, withdraw, balance, exit, changepin;
-    String pinField;
-    public Transicition(String pinField) {
-        this.pinField=pinField;
+    String pinnumber;
+    public Transicition(String pinnumber) {
+        this.pinnumber=pinnumber;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
