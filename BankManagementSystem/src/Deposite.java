@@ -64,6 +64,9 @@ public class Deposite extends JFrame implements ActionListener {
                     Date date=new Date();
                     String query="insert into bankDepo values('"+pinnumber+"','"+date+"','Deposit','"+amt+"')";
                     conn.statem.executeUpdate(query);
+                    JOptionPane.showMessageDialog(rootPane, "Amount Deposit Successfully");
+                    setVisible(false);
+                    new Transicition(pinnumber).setVisible(true);
                 }
                 catch(SQLException e){
                     e.printStackTrace();
