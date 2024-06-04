@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.sql.SQLException;
+// import java.sql.*;
 
 public class Deposite extends JFrame implements ActionListener {
     String pinnumber;
@@ -51,7 +53,12 @@ public class Deposite extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource()==deposit){
-
+            try{
+                BankDataBase conn=new BankDataBase();
+            }
+            catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         else if(ae.getSource()==exit){
             setVisible(false);
