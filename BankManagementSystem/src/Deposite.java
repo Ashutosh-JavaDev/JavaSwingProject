@@ -54,7 +54,8 @@ public class Deposite extends JFrame implements ActionListener {
 
         }
         if(ae.getSource()==exit){
-            
+            setVisible(false);
+            new Transicition(pinnumber).setVisible(true);
         }
     }
 
