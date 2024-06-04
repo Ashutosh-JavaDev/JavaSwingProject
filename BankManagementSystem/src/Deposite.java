@@ -17,24 +17,24 @@ public class Deposite extends JFrame implements ActionListener {
         image.setBounds(0, 0, 900, 900);
         add(image);
         JLabel text = new JLabel("Please enter the Amount want to Deposit");
-        text.setBounds(160, 320, 400, 20);
+        text.setBounds(160, 320,400, 20);
         text.setForeground(Color.white);
         text.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(text);
         amount = new JTextField("Amount");
-        amount.setBounds(160, 355, 400, 25);
+        amount.setBounds(160, 355,300, 25);
         amount.setForeground(Color.red);
         amount.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(amount);
         // Button
         deposit = new JButton("Deposit");
-        deposit.setBounds(270,420,100, 25);
+        deposit.setBounds(370,620,100, 25);
         // deposit.setForeground(Color.red);
         deposit.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(deposit);
         // Exit
         exit = new JButton("Exit");
-        exit.setBounds(270,455,100, 25);
+        exit.setBounds(370,655,100, 25);
         // deposit.setForeground(Color.red);
         exit.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(exit);
