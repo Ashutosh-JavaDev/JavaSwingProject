@@ -29,6 +29,7 @@ public class Deposite extends JFrame implements ActionListener {
         // Button
         deposit = new JButton("Deposit");
         deposit.setBounds(415,535,100, 25);
+        deposit.addActionListener(this);
         // deposit.setForeground(Color.red);
         deposit.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(deposit);
@@ -37,6 +38,7 @@ public class Deposite extends JFrame implements ActionListener {
         exit.setBounds(415,565,100, 25);
         // deposit.setForeground(Color.red);
         exit.setFont(new Font("Arial", Font.BOLD, 16));
+        deposit.addActionListener(this);
         image.add(exit);
         // Default
         setLayout(null);
@@ -48,7 +50,12 @@ public class Deposite extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource()==deposit){
 
+        }
+        if(ae.getSource()==exit){
+            
+        }
     }
 
     public static void main(String[] args) {
