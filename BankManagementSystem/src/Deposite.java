@@ -21,20 +21,20 @@ public class Deposite extends JFrame implements ActionListener {
         text.setForeground(Color.white);
         text.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(text);
-        amount = new JTextField("Amount");
+        amount = new JTextField();
         amount.setBounds(170, 355,300, 25);
         amount.setForeground(Color.red);
         amount.setFont(new Font("Arial", Font.BOLD, 12));
         image.add(amount);
         // Button
         deposit = new JButton("Deposit");
-        deposit.setBounds(410,520,100, 25);
+        deposit.setBounds(415,535,100, 25);
         // deposit.setForeground(Color.red);
         deposit.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(deposit);
         // Exit
         exit = new JButton("Exit");
-        exit.setBounds(410,550,100, 25);
+        exit.setBounds(415,565,100, 25);
         // deposit.setForeground(Color.red);
         exit.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(exit);
