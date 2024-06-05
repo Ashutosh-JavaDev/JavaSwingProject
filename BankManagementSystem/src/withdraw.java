@@ -32,7 +32,7 @@ public class withdraw extends JFrame implements ActionListener {
         image.add(amount);
         // Button
         drawButton = new JButton("Withdraw");
-        drawButton.setBounds(415,535,100, 25);
+        drawButton.setBounds(415,535,150, 25);
         drawButton.addActionListener(this);
         // deposit.setForeground(Color.red);
         drawButton.setFont(new Font("Arial", Font.BOLD, 16));

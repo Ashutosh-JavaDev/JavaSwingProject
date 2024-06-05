@@ -81,6 +81,10 @@ public class Transicition extends JFrame implements ActionListener {
             setVisible(false);
             new Deposite(pinnumber).setVisible(true);
         }
+        else if (ae.getSource() == withdraw) {
+            setVisible(false);
+            new withdraw(pinnumber).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
