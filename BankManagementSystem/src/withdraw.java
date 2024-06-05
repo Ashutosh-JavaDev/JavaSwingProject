@@ -55,17 +55,22 @@ public class withdraw extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource()==drawButton){
             String amt=amount.getText();
-            try{
-                BankDataBase conn=new BankDataBase();
-                Date date=new Date();
-                String query="insert into Withdraw values('"+pinnumber+"','"+date+"','Withdraw','"+amt+"')";
-                conn.statem.executeQuery(query);
-                JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
-                setVisible(false);
-                new Transicition(pinnumber).setVisible(true);
+            if(amt.equals("")){
+                JOptionPane.showMessageDialog(rootPane, "IInsert the Amount want to Withdraw");
             }
-            catch(SQLException e){
-                e.printStackTrace();
+            else {
+                try{
+                    BankDataBase conn=new BankDataBase();
+                    Date date=new Date();
+                    String query="insert into Withdraw values('"+pinnumber+"','"+date+"','Withdraw','"+amt+"')";
+                    conn.statem.executeQuery(query);
+                    JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
+                    setVisible(false);
+                    new Transicition(pinnumber).setVisible(true);
+                }
+                catch(SQLException e){
+                    e.printStackTrace();
+                }
             }
         }
         else if(ae.getSource()==exit){
