@@ -10,8 +10,10 @@ public class withdraw extends JFrame implements ActionListener{
 
     public withdraw(String pinnumber) {
         this.pinnumber = pinnumber;
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
+        Image i2=i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
     }
     public void actionPerformed(ActionEvent ae){
-        
+
     }
 }
