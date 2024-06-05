@@ -56,7 +56,7 @@ public class withdraw extends JFrame implements ActionListener {
         if(ae.getSource()==drawButton){
             String amt=amount.getText();
             if(amt.equals("")){
-                JOptionPane.showMessageDialog(rootPane, "IInsert the Amount want to Withdraw");
+                JOptionPane.showMessageDialog(rootPane, "Insert the Amount want to Withdraw");
             }
             else {
                 try{
