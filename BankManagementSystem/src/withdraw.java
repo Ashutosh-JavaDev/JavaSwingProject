@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
-
+import java.util.Date;
 public class withdraw extends JFrame implements ActionListener {
     JTextField amount;
     JButton drawButton, exit;
@@ -57,7 +57,8 @@ public class withdraw extends JFrame implements ActionListener {
             String amt=amount.getText();
             try{
                 BankDataBase conn=new BankDataBase();
-                
+                Date date=new Date();
+                String query="insert into Withdraw values('"+pinnumber+"','"+date+"','Withdraw','"+amt+"')";
             }
             catch(SQLException e){
                 e.printStackTrace();
