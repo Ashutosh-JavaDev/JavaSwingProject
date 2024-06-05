@@ -8,6 +8,6 @@ public class withdraw {
     JButton drawButton,exit;
     String pinnumber;
     public withdraw(String pinnumber){
-
+        this.pinnumber=pinnumber;
     }
 }
