@@ -33,7 +33,7 @@ public class withdraw extends JFrame implements ActionListener {
         image.add(amount);
         // Button
         drawButton = new JButton("Withdraw");
-        drawButton.setBounds(415, 535, 150, 25);
+        drawButton.setBounds(395, 535, 120, 25);
         drawButton.addActionListener(this);
         // deposit.setForeground(Color.red);
         drawButton.setFont(new Font("Arial", Font.BOLD, 16));
@@ -46,6 +46,7 @@ public class withdraw extends JFrame implements ActionListener {
         exit.addActionListener(this);
         image.add(exit);
         // Default
+        setLayout(null);
         setSize(900, 900);
         setLocation(300, 0);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -64,7 +65,7 @@ public class withdraw extends JFrame implements ActionListener {
                     Date date = new Date();
                     String query = "insert into Withdraw values('" + pinnumber + "','" + date + "','Withdraw','" + amt
                             + "')";
-                    conn.statem.executeQuery(query);
+                    conn.statem.executeUpdate(query);
                     JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
                     setVisible(false);
                     new Transicition(pinnumber).setVisible(true);
