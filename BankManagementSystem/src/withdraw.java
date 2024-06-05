@@ -63,7 +63,7 @@ public class withdraw extends JFrame implements ActionListener {
                 try {
                     BankDataBase conn = new BankDataBase();
                     Date date = new Date();
-                    String query = "insert into Withdraw values('" + pinnumber + "','" + date + "','Withdraw','" + amt
+                    String query = "insert into Wthdraw values('" + pinnumber + "','" + date + "','Withdraw','" + amt
                             + "')";
                     conn.statem.executeUpdate(query);
                     JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
