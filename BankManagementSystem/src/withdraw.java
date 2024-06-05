@@ -52,6 +52,15 @@ public class withdraw extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
+        if(ae.getSource()==drawButton){
 
+        }
+        else if(ae.getSource()==exit){
+            setVisible(false);
+            new Transicition(pinnumber).setVisible(true);
+        }
+    }
+    public static void main(String[]args){
+        new withdraw("");
     }
 }
