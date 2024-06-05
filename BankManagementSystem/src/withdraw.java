@@ -59,6 +59,10 @@ public class withdraw extends JFrame implements ActionListener {
                 BankDataBase conn=new BankDataBase();
                 Date date=new Date();
                 String query="insert into Withdraw values('"+pinnumber+"','"+date+"','Withdraw','"+amt+"')";
+                conn.statem.executeQuery(query);
+                JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
+                setVisible(false);
+                new Transicition(pinnumber).setVisible(true);
             }
             catch(SQLException e){
                 e.printStackTrace();
