@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.util.Date;
+
 public class withdraw extends JFrame implements ActionListener {
     JTextField amount;
     JButton drawButton, exit;
@@ -21,25 +22,25 @@ public class withdraw extends JFrame implements ActionListener {
         add(image);
         // Field
         JLabel text = new JLabel("Please enter the Amount want to WithDraw");
-        text.setBounds(160, 320,400, 20);
+        text.setBounds(160, 320, 400, 20);
         text.setForeground(Color.white);
         text.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(text);
         amount = new JTextField();
-        amount.setBounds(170, 355,300, 25);
+        amount.setBounds(170, 355, 300, 25);
         amount.setForeground(Color.red);
         amount.setFont(new Font("Arial", Font.BOLD, 12));
         image.add(amount);
         // Button
         drawButton = new JButton("Withdraw");
-        drawButton.setBounds(415,535,150, 25);
+        drawButton.setBounds(415, 535, 150, 25);
         drawButton.addActionListener(this);
         // deposit.setForeground(Color.red);
         drawButton.setFont(new Font("Arial", Font.BOLD, 16));
         image.add(drawButton);
         // d
         exit = new JButton("Exit");
-        exit.setBounds(415,565,100, 25);
+        exit.setBounds(415, 565, 100, 25);
         // deposit.setForeground(Color.red);
         exit.setFont(new Font("Arial", Font.BOLD, 16));
         exit.addActionListener(this);
@@ -53,32 +54,31 @@ public class withdraw extends JFrame implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent ae) {
-        if(ae.getSource()==drawButton){
-            String amt=amount.getText();
-            if(amt.equals("")){
+        if (ae.getSource() == drawButton) {
+            String amt = amount.getText();
+            if (amt.equals("")) {
                 JOptionPane.showMessageDialog(rootPane, "Insert the Amount want to Withdraw");
-            }
-            else {
-                try{
-                    BankDataBase conn=new BankDataBase();
-                    Date date=new Date();
-                    String query="insert into Withdraw values('"+pinnumber+"','"+date+"','Withdraw','"+amt+"')";
+            } else {
+                try {
+                    BankDataBase conn = new BankDataBase();
+                    Date date = new Date();
+                    String query = "insert into Withdraw values('" + pinnumber + "','" + date + "','Withdraw','" + amt
+                            + "')";
                     conn.statem.executeQuery(query);
                     JOptionPane.showMessageDialog(rootPane, "Money WithDraw Successfully");
                     setVisible(false);
                     new Transicition(pinnumber).setVisible(true);
-                }
-                catch(SQLException e){
+                } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
-        }
-        else if(ae.getSource()==exit){
+        } else if (ae.getSource() == exit) {
             setVisible(false);
             new Transicition(pinnumber).setVisible(true);
         }
     }
-    public static void main(String[]args){
+
+    public static void main(String[] args) {
         new withdraw("");
     }
 }
