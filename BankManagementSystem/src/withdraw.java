@@ -4,6 +4,7 @@ import java.awt.Font;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class withdraw extends JFrame implements ActionListener {
     JTextField amount;
@@ -53,7 +54,14 @@ public class withdraw extends JFrame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource()==drawButton){
-
+            String amt=amount.getText();
+            try{
+                BankDataBase conn=new BankDataBase();
+                
+            }
+            catch(SQLException e){
+                e.printStackTrace();
+            }
         }
         else if(ae.getSource()==exit){
             setVisible(false);
