@@ -18,6 +18,12 @@ public class Fastcash extends JFrame implements ActionListener {
         Image i2=i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
         JLabel label=new JLabel(i3);
+        setSize(900,900);
+        setLocation(300,0);
+        setLayout(null);
+        setUndecorated(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
     }
 
     public void actionPerformed(ActionEvent ae) {
