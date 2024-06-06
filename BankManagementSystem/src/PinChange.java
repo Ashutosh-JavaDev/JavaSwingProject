@@ -96,6 +96,9 @@ public class PinChange extends JFrame implements ActionListener {
 
                     BankDataBase conn = new BankDataBase();
                     String query1="update login set PinNumber ='"+pinNumber+"'where PinNumber ='"+pinnumber+"'";
+                    String query2="update signupthree set PinNumber ='"+pinNumber+"'where PinNumber ='"+pinnumber+"'";
+                    String query3="update bankDepo set Pin ='"+pinNumber+"'where Pin ='"+pinnumber+"'";
+
 
                 } catch (SQLException e) {
                     e.printStackTrace();
