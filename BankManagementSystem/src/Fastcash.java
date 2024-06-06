@@ -6,6 +6,13 @@ import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-public class Fastcash {
+public class Fastcash extends JFrame implements ActionListener {
+    String pinnumber;
+
+ public Fastcash(String pinnumber){
+
+ }   
+ public void actionPerformed(ActionEvent ae){
     
+ }
 }
