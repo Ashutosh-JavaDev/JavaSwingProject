@@ -91,13 +91,15 @@ public class PinChange extends JFrame implements ActionListener {
             if (!pinNumber.equals(repinNumber)) {
                 JOptionPane.showMessageDialog(rootPane, "Re-Enter PIN didn't Matched\nEnter Again!");
                 return;
-            }
-            try {
+            } else {
+                try {
 
-                BankDataBase conn = new BankDataBase();
+                    BankDataBase conn = new BankDataBase();
+                    String query1="update login set PinNumber ='"+pinNumber+"'where PinNumber ='"+pinnumber+"'";
 
-            } catch (SQLException e) {
-                e.printStackTrace();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
