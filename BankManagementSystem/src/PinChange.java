@@ -91,21 +91,22 @@ public class PinChange extends JFrame implements ActionListener {
             if (!pinNumber.equals(repinNumber)) {
                 JOptionPane.showMessageDialog(rootPane, "Re-Enter PIN didn't Matched\nEnter Again!");
                 return;
-            } else {
-                try {
+            }
+            try {
 
-                    BankDataBase conn = new BankDataBase();
-                    String query1="update login set PinNumber ='"+pinNumber+"'where PinNumber ='"+pinnumber+"'";
-                    String query2="update signupthree set PinNumber ='"+pinNumber+"'where PinNumber ='"+pinnumber+"'";
-                    String query3="update bankDepo set Pin ='"+pinNumber+"'where Pin ='"+pinnumber+"'";
-                    conn.statem.executeUpdate(query1);
-                    conn.statem.executeUpdate(query2);
-                    conn.statem.executeUpdate(query3);
-                    JOptionPane.showMessageDialog(rootPane, "PIN Changed Successfully");
+                BankDataBase conn = new BankDataBase();
+                String query1 = "update login set PinNumber ='" + pinNumber + "'where PinNumber ='" + pinnumber + "'";
+                String query2 = "update signupthree set PinNumber ='" + pinNumber + "'where PinNumber ='" + pinnumber
+                        + "'";
+                String query3 = "update bankDepo set Pin ='" + pinNumber + "'where Pin ='" + pinnumber + "'";
+                conn.statem.executeUpdate(query1);
+                conn.statem.executeUpdate(query2);
+                conn.statem.executeUpdate(query3);
+                JOptionPane.showMessageDialog(rootPane, "PIN Changed Successfully");
 
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+
             }
         }
     }
