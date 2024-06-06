@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.Font;
-import java.awt.Color;
 import java.awt.Image;
 import java.util.Date;
 import java.sql.SQLException;
