@@ -13,6 +13,9 @@ public class Fastcash extends JFrame implements ActionListener {
 
  }   
  public void actionPerformed(ActionEvent ae){
-    
+
+ }
+ public static void main(String[]args){
+    new Fastcash("");
  }
 }
