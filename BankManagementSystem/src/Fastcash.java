@@ -96,7 +96,9 @@ public class Fastcash extends JFrame implements ActionListener {
                 ResultSet re=conn.statem.executeQuery(query);
                 int balance=0;
                 while(re.next()){
-
+                    if(re.getString("Type").equals("Amount")){
+                        
+                    }
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
