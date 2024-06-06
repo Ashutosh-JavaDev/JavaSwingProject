@@ -104,12 +104,12 @@ public class Fastcash extends JFrame implements ActionListener {
                 }
                 if (ae.getSource() != back && balance < Integer.parseInt(amount)) {
                     JOptionPane.showMessageDialog(rootPane, "Insufficent Balance");
-                } else {
-                    Date date = new Date();
-                    String query2 = "insert into bankDepo values('" + pinnumber + "','" + date + "','Deposit','"
-                            + amount + "')";
-                    conn.statem.executeUpdate(query2);
                 }
+                Date date = new Date();
+                String query2 = "insert into bankDepo values('" + pinnumber + "','" + date + "','Withdrawl','"
+                        + amount + "')";
+                conn.statem.executeUpdate(query2);
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
