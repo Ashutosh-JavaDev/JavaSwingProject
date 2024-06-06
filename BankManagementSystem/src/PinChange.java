@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class PinChange extends JFrame implements ActionListener {
     String pinnumber;
     JButton Change,Back;
-    JPasswordField pin,repin;
+    JPasswordField pinfield,repin;
 
     PinChange(String pinnumber){
         this.pinnumber=pinnumber;
@@ -25,6 +25,20 @@ public class PinChange extends JFrame implements ActionListener {
         pin.setFont(new Font("Raleway",Font.BOLD,20));
         pin.setForeground(Color.white);
         image.add(pin);
+        // label
+        JLabel npin=new JLabel("Enter New PIN: ");
+        npin.setBounds(160,360,300,20);
+        npin.setFont(new Font("Raleway",Font.BOLD,16));
+        npin.setForeground(Color.white);
+        image.add(npin);
+        JLabel rpin=new JLabel("Re-Enter PIN: ");
+        rpin.setBounds(160,400,300,20);
+        rpin.setFont(new Font("Raleway",Font.BOLD,20));
+        rpin.setForeground(Color.white);
+        image.add(rpin);
+        // Password
+        pinfield=new JPasswordField(); 
+
         setLayout(null);
         setSize(900,900);
         setLocation(300,0);
