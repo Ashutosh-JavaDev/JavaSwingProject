@@ -30,36 +30,43 @@ public class Fastcash extends JFrame implements ActionListener {
         hundred.setBounds(160,455,100,25);
         hundred.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(hundred);
+        hundred.addActionListener(this);
         // 
         twohundred=new JButton("Rs 200");
         twohundred.setBounds(290,455,100,25);
         twohundred.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(twohundred);
+        twohundred.addActionListener(this);
         // 
         fivehundred=new JButton("Rs 500");
         fivehundred.setBounds(160,490,100,25);
         fivehundred.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(fivehundred);
+        fivehundred.addActionListener(this);
         // 
         thousand=new JButton("Rs 1000");
         thousand.setBounds(290,490,100,25);
         thousand.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(thousand);
+        thousand.addActionListener(this);
         // 
         twothoudsand=new JButton("Rs 2000");
         twothoudsand.setBounds(160,525,100,25);
         twothoudsand.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(twothoudsand);
+        twothoudsand.addActionListener(this);
         // 
         fivethousand=new JButton("Rs 5000");
         fivethousand.setBounds(290,560,100,25);
         fivethousand.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(fivethousand);
+        fivethousand.addActionListener(this);
         // 
         tenthousand=new JButton("Rs 10000");
         tenthousand.setBounds(160,595,100,25);
         tenthousand.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(tenthousand);
+        tenthousand.addActionListener(this);
         // 
         back=new JButton("Rs Back");
         back.setBounds(290,530,100,25);
