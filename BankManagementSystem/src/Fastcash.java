@@ -24,8 +24,6 @@ public class Fastcash extends JFrame implements ActionListener {
         hundred=new JButton("Rs 100");
         hundred.setBounds(160,455,100,25);
         hundred.setFont(new Font("Raleway",Font.BOLD,16));
-        hundred.setBackground(Color.black);
-        hundred.setForeground(Color.white);
         label.add(hundred);
         // Default
         setSize(900,900);
