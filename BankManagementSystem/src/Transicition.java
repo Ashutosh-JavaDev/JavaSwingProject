@@ -89,6 +89,10 @@ public class Transicition extends JFrame implements ActionListener {
             setVisible(false);
             new Fastcash(pinnumber).setVisible(true);
         }
+        else if(ae.getSource()==changepin){
+            setVisible(false);
+            new PinChange(pinnumber).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
