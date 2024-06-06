@@ -9,9 +9,10 @@ import java.awt.event.ActionEvent;
 
 public class Fastcash extends JFrame implements ActionListener {
     String pinnumber;
-    JButton hundred,twohundred,fivehundred,thousand,twothoudsand,fivethousand,tenthousand,back;
+    JButton hundred, twohundred, fivehundred, thousand, twothoudsand, fivethousand, tenthousand, back;
+
     public Fastcash(String pinnumber) {
-        this.pinnumber=pinnumber;
+        this.pinnumber = pinnumber;
     }
 
     public void actionPerformed(ActionEvent ae) {
