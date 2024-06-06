@@ -21,8 +21,8 @@ public class PinChange extends JFrame implements ActionListener {
         add(image);
         // Text
         JLabel pin=new JLabel("Please Enter the Pin Number");
-        pin.setBounds(160,230,200,25);
-        pin.setFont(new Font("system",Font.BOLD,20));
+        pin.setBounds(170,330,300,20);
+        pin.setFont(new Font("Raleway",Font.BOLD,20));
         pin.setForeground(Color.white);
         image.add(pin);
         setLayout(null);
