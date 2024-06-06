@@ -49,6 +49,18 @@ public class PinChange extends JFrame implements ActionListener {
         repin.setForeground(Color.white);
         image.add(repin);
         // 
+        Change=new JButton("Change");
+        Change.setBounds(550,360,100,20);
+        Change.setFont(new Font("Raleway",Font.BOLD,16));
+        Change.setForeground(Color.white);
+        image.add(Change);
+        // 
+        Back=new JButton("BACK");
+        Back.setBounds(550,400,100,20);
+        Back.setFont(new Font("Raleway",Font.BOLD,16));
+        Back.setForeground(Color.white);
+        image.add(Back);
+        // 
         setLayout(null);
         setSize(900,900);
         setLocation(300,0);
