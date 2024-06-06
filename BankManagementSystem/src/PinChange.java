@@ -40,13 +40,13 @@ public class PinChange extends JFrame implements ActionListener {
         pinfield = new JPasswordField();
         pinfield.setBounds(360, 360, 120, 20);
         pinfield.setFont(new Font("Raleway", Font.BOLD, 16));
-        pinfield.setForeground(Color.white);
+        pinfield.setForeground(Color.black);
         image.add(pinfield);
         //
         repin = new JPasswordField();
         repin.setBounds(360, 400, 120, 20);
         repin.setFont(new Font("Raleway", Font.BOLD, 16));
-        repin.setForeground(Color.white);
+        repin.setForeground(Color.black);
         image.add(repin);
         //
         Change = new JButton("Change");
