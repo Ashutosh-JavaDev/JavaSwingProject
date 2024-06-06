@@ -92,12 +92,12 @@ public class Fastcash extends JFrame implements ActionListener {
             String amount = ((JButton) ae.getSource()).getText().substring(3);
             try {
                 BankDataBase conn = new BankDataBase();
-                String query="select*from bankDepo where Pin ='" + pinnumber + "'";
-                ResultSet re=conn.statem.executeQuery(query);
-                int balance=0;
-                while(re.next()){
-                    if(re.getString("Type").equals("Amount")){
-                        
+                String query = "select*from bankDepo where Pin ='" + pinnumber + "'";
+                ResultSet re = conn.statem.executeQuery(query);
+                int balance = 0;
+                while (re.next()) {
+                    if (re.getString("Type").equals("Deposit")) {
+                        balance += Integer.parseInt(re.getString("Amount"));
                     }
                 }
             } catch (SQLException e) {
