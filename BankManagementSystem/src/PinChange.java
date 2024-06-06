@@ -11,6 +11,13 @@ public class PinChange extends JFrame implements ActionListener {
 
     PinChange(String pinnumber){
         this.pinnumber=pinnumber;
+        
+        setLayout(null);
+        setSize(900,900);
+        setLocation(300,0);
+        setUndecorated(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setVisible(true);
     }
     public void actionPerformed(ActionEvent ae){
         
