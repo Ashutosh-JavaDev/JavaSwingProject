@@ -23,9 +23,9 @@ public class Fastcash extends JFrame implements ActionListener {
         add(label);
         // Heading
         JLabel text = new JLabel("Please Select the Amount to WithDraw");
-        text.setBounds(180, 410, 400, 20);
+        text.setBounds(180, 320,350,20);
         text.setForeground(Color.white);
-        text.setFont(new Font("Arial", Font.BOLD, 18));
+        text.setFont(new Font("Arial", Font.BOLD, 16));
         label.add(text);
         // Button
         hundred = new JButton("Rs 100");
@@ -109,6 +109,7 @@ public class Fastcash extends JFrame implements ActionListener {
                 String query2 = "insert into bankDepo values('" + pinnumber + "','" + date + "','Withdrawl','"
                         + amount + "')";
                 conn.statem.executeUpdate(query2);
+                JOptionPane.showMessageDialog(null,"Rs "+amount+" Withdrawn Successfully");
 
             } catch (SQLException e) {
                 e.printStackTrace();
