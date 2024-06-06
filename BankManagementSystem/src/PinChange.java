@@ -5,5 +5,10 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class PinChange {
+    PinChange(String pinnumber){
 
+    }
+    public static void main(String[]args){
+        new PinChange("");
+    }
 }
