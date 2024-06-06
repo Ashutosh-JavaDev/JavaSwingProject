@@ -101,7 +101,7 @@ public class PinChange extends JFrame implements ActionListener {
                     conn.statem.executeUpdate(query1);
                     conn.statem.executeUpdate(query2);
                     conn.statem.executeUpdate(query3);
-
+                    JOptionPane.showMessageDialog(rootPane, "PIN Changed Successfully");
 
                 } catch (SQLException e) {
                     e.printStackTrace();
