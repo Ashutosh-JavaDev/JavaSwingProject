@@ -97,7 +97,9 @@ public class Fastcash extends JFrame implements ActionListener {
                 int balance = 0;
                 while (re.next()) {
                     if (re.getString("Type").equals("Deposit")) {
-                        balance += Integer.parseInt(re.getString("Amount"));
+                        balance += Integer.parseInt(re.getString("amount"));
+                    } else {
+                        balance -= Integer.parseInt(re.getString("amount"));
                     }
                 }
             } catch (SQLException e) {
