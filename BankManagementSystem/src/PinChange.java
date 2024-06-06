@@ -21,7 +21,7 @@ public class PinChange extends JFrame implements ActionListener {
         add(image);
         // Text
         JLabel pin=new JLabel("Please Enter the Pin Number");
-        pin.setBounds(170,330,300,20);
+        pin.setBounds(170,310,300,20);
         pin.setFont(new Font("Raleway",Font.BOLD,20));
         pin.setForeground(Color.white);
         image.add(pin);
@@ -38,28 +38,31 @@ public class PinChange extends JFrame implements ActionListener {
         image.add(rpin);
         // Password
         pinfield=new JPasswordField(); 
-        pinfield.setBounds(330,360,100,20);
+        pinfield.setBounds(360,360,120,20);
         pinfield.setFont(new Font("Raleway",Font.BOLD,16));
         pinfield.setForeground(Color.white);
         image.add(pinfield);
         // 
         repin=new JPasswordField(); 
-        repin.setBounds(330,400,100,20);
+        repin.setBounds(360,400,120,20);
         repin.setFont(new Font("Raleway",Font.BOLD,16));
         repin.setForeground(Color.white);
         image.add(repin);
         // 
         Change=new JButton("Change");
-        Change.setBounds(550,360,100,20);
+        Change.setBounds(410,530,100,20);
         Change.setFont(new Font("Raleway",Font.BOLD,16));
-        Change.setForeground(Color.white);
+        // Change.setForeground(Color.white);
         image.add(Change);
+        Change.addActionListener(this);
         // 
         Back=new JButton("BACK");
-        Back.setBounds(550,400,100,20);
+        Back.setBounds(410,565,100,20);
         Back.setFont(new Font("Raleway",Font.BOLD,16));
-        Back.setForeground(Color.white);
+        // Back.setForeground(Color.white);
         image.add(Back);
+        Back.addActionListener(this);
+
         // 
         setLayout(null);
         setSize(900,900);
