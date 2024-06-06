@@ -5,8 +5,12 @@ import java.awt.event.ActionListener;
 import java.sql.SQLException;
 
 public class PinChange {
-    PinChange(String pinnumber){
+    String pinnumber;
+    JButton Change,Back;
+    JPasswordField pin,repin;
 
+    PinChange(String pinnumber){
+        this.pinnumber=pinnumber;
     }
     public static void main(String[]args){
         new PinChange("");
