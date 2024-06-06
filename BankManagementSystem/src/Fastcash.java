@@ -20,6 +20,11 @@ public class Fastcash extends JFrame implements ActionListener {
         JLabel label=new JLabel(i3);
         label.setBounds(0,0,900,900);
         add(label);
+        // Heading
+        JLabel text=new JLabel("Please Select the Amount to WithDraw");
+        text.setBounds(160,430,400,20);
+        text.setFont(new Font("Arial",Font.ITALIC,20));
+        label.add(text);
         // Button
         hundred=new JButton("Rs 100");
         hundred.setBounds(160,455,100,25);
