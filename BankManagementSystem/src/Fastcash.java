@@ -94,6 +94,10 @@ public class Fastcash extends JFrame implements ActionListener {
                 BankDataBase conn = new BankDataBase();
                 String query="select*from bankDepo where Pin ='" + pinnumber + "'";
                 ResultSet re=conn.statem.executeQuery(query);
+                int balance=0;
+                while(re.next()){
+
+                }
             } catch (SQLException e) {
                 e.printStackTrace();
             }
