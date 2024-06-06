@@ -50,7 +50,7 @@ public class withdraw extends JFrame implements ActionListener {
         setSize(900, 900);
         setLocation(300, 0);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setUndecorated(false);
+        setUndecorated(true);
         setVisible(true);
     }
 
