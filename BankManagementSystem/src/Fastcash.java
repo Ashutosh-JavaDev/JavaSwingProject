@@ -72,6 +72,7 @@ public class Fastcash extends JFrame implements ActionListener {
         back.setBounds(290,530,100,25);
         back.setFont(new Font("Raleway",Font.BOLD,16));
         label.add(back);
+        back.addActionListener(this);
         // Default
         setSize(900,900);
         setLocation(300,0);
