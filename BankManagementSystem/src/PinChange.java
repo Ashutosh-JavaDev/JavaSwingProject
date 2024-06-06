@@ -72,7 +72,20 @@ public class PinChange extends JFrame implements ActionListener {
         setVisible(true);
     }
     public void actionPerformed(ActionEvent ae){
-        
+        if(ae.getSource()==Back){
+            setVisible(false);
+            new Transicition(pinnumber).setVisible(true);
+        }
+        if(ae.getSource()==Change){
+            try{
+                String pinNumber=pinfield.getText();
+                String repinNumber=repin.getText();
+                BankDataBase conn=new BankDataBase();
+            }
+            catch(SQLException e){
+                e.printStackTrace();
+            }
+        }
     }
     public static void main(String[]args){
         new PinChange("");
