@@ -18,11 +18,11 @@ public class miniStatement extends JFrame {
         card.setBounds(15, 150, 250, 25);
         add(card);
         JLabel mini = new JLabel();
-        mini.setBounds(20, 200, 350, 600);
+        mini.setBounds(20, 200, 350, 400);
         add(mini);
         try {
             BankDataBase conn = new BankDataBase();
-            ResultSet re = conn.statem.executeQuery("select *from login where PinNumber = '" + 2002 + "'");
+            ResultSet re = conn.statem.executeQuery("select *from login where PinNumber = '" + pinnumber + "'");
             while (re.next()) {
                 card.setText("Card Number: " + re.getString("CardNumber").substring(0, 4) + "XXXXXXXX"
                         + re.getString("CardNumber").substring(12));
@@ -34,7 +34,7 @@ public class miniStatement extends JFrame {
 
         try {
             BankDataBase conn = new BankDataBase();
-            ResultSet res = conn.statem.executeQuery("select*from bankDepo where Pin='" + 2002 + "'");
+            ResultSet res = conn.statem.executeQuery("select*from bankDepo where Pin='" + pinnumber + "'");
             while (res.next()) {
                 mini.setText(
                         mini.getText() + "<html>" + res.getString("Deposit_Date") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
@@ -51,7 +51,7 @@ public class miniStatement extends JFrame {
         }
 
         JLabel bal = new JLabel("Your Current Balance is Rs " + balance);
-        bal.setBounds(15, 700, 300, 25);
+        bal.setBounds(150, 525, 300, 25);
         add(bal);
         setLayout(null);
         setSize(400, 600);
