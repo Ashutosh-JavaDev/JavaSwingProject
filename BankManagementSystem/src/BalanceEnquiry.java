@@ -20,8 +20,13 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         add(image);
         try{
             BankDataBase conn=new BankDataBase();
-            ResultSet res=conn.statem.executeQuery("select *from login where PinNumber ='"+pinnumber+"'");
+            ResultSet res=conn.statem.executeQuery("select *from bankDepo where Pin ='"+pinnumber+"'");
             int balance=0;
+            while(res.next()){
+                if(res.getString("Type").equals("Deposit")){
+
+                }
+            }
             
         }
         catch(SQLException e){
