@@ -61,7 +61,7 @@ public class Transicition extends JFrame implements ActionListener {
         ministatement.setFont(new Font("Roboto", Font.BOLD, 15));
         ministatement.setForeground(Color.WHITE);
         label.add(ministatement);
-        changepin.addActionListener(this);
+        ministatement.addActionListener(this);
         exit = new JButton("EXIT");
         exit.setBackground(Color.black);
         exit.setBounds(155, 565, 150, 30);

@@ -70,7 +70,7 @@ public class Fastcash extends JFrame implements ActionListener {
         label.add(tenthousand);
         tenthousand.addActionListener(this);
         //
-        back = new JButton("Rs Back");
+        back = new JButton("Back");
         back.setBounds(400, 560, 100, 25);
         back.setFont(new Font("Raleway", Font.BOLD, 16));
         label.add(back);
@@ -104,6 +104,7 @@ public class Fastcash extends JFrame implements ActionListener {
                 }
                 if (ae.getSource() != back && balance < Integer.parseInt(amount)) {
                     JOptionPane.showMessageDialog(rootPane, "Insufficent Balance");
+                    return;
                 }
                 Date date = new Date();
                 String query2 = "insert into bankDepo values('" + pinnumber + "','" + date + "','Withdrawl','"
