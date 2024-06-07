@@ -103,6 +103,10 @@ public class Transicition extends JFrame implements ActionListener {
             setVisible(false);
             new BalanceEnquiry(pinnumber).setVisible(true);
         }
+        else if(ae.getSource()==ministatement){
+            setVisible(false);
+            new miniStatement(pinnumber).setVisible(true);
+        }
     }
 
     public static void main(String[] args) {
