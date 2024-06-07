@@ -11,29 +11,27 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
     JButton back;
 
     public BalanceEnquiry(String pinnumber) {
-        this.pinnumber=pinnumber;
+        this.pinnumber = pinnumber;
         ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/iimage.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
-        image.setBounds(0,0,900,900);
+        image.setBounds(0, 0, 900, 900);
         add(image);
-        int balance=0;
+        int balance = 0;
 
-        try{
-            BankDataBase conn=new BankDataBase();
-            ResultSet res=conn.statem.executeQuery("select *from bankDepo where Pin ='"+pinnumber+"'");
-            while(res.next()){
-                if(res.getString("Type").equals("Deposit")){
-                    balance+=Integer.parseInt("Amount");
-                }
-                else{
-                    balance-=Integer.parseInt("Amount");
+        try {
+            BankDataBase conn = new BankDataBase();
+            ResultSet res = conn.statem.executeQuery("select *from bankDepo where Pin ='" + pinnumber + "'");
+            while (res.next()) {
+                if (res.getString("Type").equals("Deposit")) {
+                    balance += Integer.parseInt("Amount");
+                } else {
+                    balance -= Integer.parseInt("Amount");
                 }
             }
-            
-        }
-        catch(SQLException e){
+
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         setLayout(null);
