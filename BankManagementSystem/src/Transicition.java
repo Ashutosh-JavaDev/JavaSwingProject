@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Transicition extends JFrame implements ActionListener {
-    JButton fast, deposite, withdraw, balance, exit, changepin;
+    JButton fast, deposite, withdraw, balance, exit, changepin,ministatement;
     String pinnumber;
     public Transicition(String pinnumber) {
         this.pinnumber=pinnumber;
@@ -55,10 +55,16 @@ public class Transicition extends JFrame implements ActionListener {
         changepin.setFont(new Font("Roboto", Font.BOLD, 15));
         changepin.setForeground(Color.WHITE);
         label.add(changepin);
+        ministatement = new JButton("M-Statement");
+        ministatement.setBackground(Color.black);
+        ministatement.setBounds(365, 530, 150, 30);
+        ministatement.setFont(new Font("Roboto", Font.BOLD, 15));
+        ministatement.setForeground(Color.WHITE);
+        label.add(ministatement);
         changepin.addActionListener(this);
         exit = new JButton("EXIT");
         exit.setBackground(Color.black);
-        exit.setBounds(365, 530, 150, 30);
+        exit.setBounds(155, 570, 150, 30);
         exit.setFont(new Font("Roboto", Font.BOLD, 15));
         exit.setForeground(Color.WHITE);
         label.add(exit);
