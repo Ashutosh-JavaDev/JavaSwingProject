@@ -18,13 +18,17 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         JLabel image = new JLabel(i3);
         image.setBounds(0,0,900,900);
         add(image);
+        int balance=0;
+
         try{
             BankDataBase conn=new BankDataBase();
             ResultSet res=conn.statem.executeQuery("select *from bankDepo where Pin ='"+pinnumber+"'");
-            int balance=0;
             while(res.next()){
                 if(res.getString("Type").equals("Deposit")){
-
+                    balance+=Integer.parseInt("Amount");
+                }
+                else{
+                    balance-=Integer.parseInt("Amount");
                 }
             }
             
