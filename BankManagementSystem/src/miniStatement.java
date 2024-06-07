@@ -10,6 +10,13 @@ public class miniStatement extends JFrame {
 
     public miniStatement(String pinnumber) {
         this.pinnumber = pinnumber;
+        setLayout(null);
+        setSize(50,200);
+        setLocation(20,20);
+        setUndecorated(true);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setTitle("Mini Statement");
+        setVisible(true);
     }
 
 }
