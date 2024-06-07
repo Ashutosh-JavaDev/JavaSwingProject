@@ -34,6 +34,10 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JLabel statement=new JLabel("Your current Balance is Rs "+balance);
+        statement.setBounds(160,200,400,20);
+        statement.setForeground(Color.white);
+        image.add(statement);
         setLayout(null);
         setSize(900, 900);
         setLocation(300, 0);
