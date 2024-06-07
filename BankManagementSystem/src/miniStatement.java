@@ -3,11 +3,9 @@ import java.awt.*;
 import java.sql.SQLException;
 import java.sql.ResultSet;
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
-public class miniStatement extends JFrame implements ActionListener{
+
+public class miniStatement extends JFrame{
     String pinnumber;
     JButton back;
     public miniStatement(String pinnumber) {
@@ -36,15 +34,12 @@ public class miniStatement extends JFrame implements ActionListener{
             BankDataBase conn=new BankDataBase();
             ResultSet res=conn.statem.executeQuery("select*from bankDepo where Pin='"+pinnumber+"'");
             while(res.next()){
-
+                mini.setText("Type: "+res.getString("Type")+res.getString("   Deposit_Date   ")+"   Amount: "+res.getString("   Amount   "));
+                System.out.println();
             }
         }catch(SQLException e){
             e.printStackTrace();
         }
-        back=new JButton("Back");
-        back.setBounds(350, 700, 100, 20);
-        add(back);
-        back.addActionListener(this);
         setLayout(null);
         setSize(400, 800);
         setLocation(20, 20);
@@ -53,10 +48,7 @@ public class miniStatement extends JFrame implements ActionListener{
         setTitle("Mini Statement");
         setVisible(true);
     }
-    public void actionPerformed(ActionEvent ae){
-        setVisible(false);
-        new Transicition(pinnumber).setVisible(true);
-    }
+ 
     public static  void main(String[]args){
         new miniStatement("");
     }
