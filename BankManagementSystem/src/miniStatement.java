@@ -30,6 +30,8 @@ public class miniStatement extends JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        int balance = 0;
+
         try {
             BankDataBase conn = new BankDataBase();
             ResultSet res = conn.statem.executeQuery("select*from bankDepo where Pin='" + 2002 + "'");
@@ -38,16 +40,7 @@ public class miniStatement extends JFrame {
                         mini.getText() + "<html>" + res.getString("Deposit_Date") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                                 + res.getString("Type") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                                 + res.getString("Amount") + "<br><br>" + "<html>");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        int balance = 0;
-        try {
-            BankDataBase conn = new BankDataBase();
-            ResultSet result = conn.statem.executeQuery("select*from bankDepo where Pin = '" + pinnumber + "'");
-            while (result.next()) {
-                if (result.getString("Type").equals("Deposit")) {
+                if (res.getString("Type").equals("Deposit")) {
                     balance += Integer.parseInt("amount");
                 } else {
                     balance -= Integer.parseInt("amount");
@@ -56,8 +49,9 @@ public class miniStatement extends JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        JLabel bal=new JLabel("Your Current Balance is Rs "+balance);
-        bal.setBounds(15,700,300,25);
+
+        JLabel bal = new JLabel("Your Current Balance is Rs " + balance);
+        bal.setBounds(15, 700, 300, 25);
         add(bal);
         setLayout(null);
         setSize(400, 600);
