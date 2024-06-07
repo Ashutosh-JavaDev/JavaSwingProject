@@ -12,7 +12,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
 
     public BalanceEnquiry(String pinnumber) {
         this.pinnumber = pinnumber;
-        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/iimage.jpg"));
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("Icons/image.jpg"));
         Image i2 = i1.getImage().getScaledInstance(900, 900, Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         JLabel image = new JLabel(i3);
@@ -25,9 +25,9 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
             ResultSet res = conn.statem.executeQuery("select *from bankDepo where Pin ='" + pinnumber + "'");
             while (res.next()) {
                 if (res.getString("Type").equals("Deposit")) {
-                    balance += Integer.parseInt("Amount");
+                    balance += Integer.parseInt(res.getString("amount"));
                 } else {
-                    balance -= Integer.parseInt("Amount");
+                    balance -= Integer.parseInt(res.getString("amount"));
                 }
             }
 
@@ -35,9 +35,13 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
             e.printStackTrace();
         }
         JLabel statement=new JLabel("Your current Balance is Rs "+balance);
-        statement.setBounds(160,200,400,20);
+        statement.setBounds(220,320,400,20);
         statement.setForeground(Color.white);
         image.add(statement);
+        back=new JButton("Back");
+        back.setBounds(390,560,100,25);
+        image.add(back);
+        back.addActionListener(this);
         setLayout(null);
         setSize(900, 900);
         setLocation(300, 0);
