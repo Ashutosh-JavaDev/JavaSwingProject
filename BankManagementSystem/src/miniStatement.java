@@ -2,7 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.sql.SQLException;
 import java.sql.ResultSet;
-import java.awt.Image;
 import java.awt.Color;
 
 public class miniStatement extends JFrame {
@@ -14,7 +13,12 @@ public class miniStatement extends JFrame {
         heading.setBounds(25,100,400,20);
         heading.setFont(new Font("Raleway",Font.BOLD,20));
         add(heading);
-        
+        try{
+            BankDataBase conn=new BankDataBase();
+            ResultSet res=conn.statem.executeQuery("select*from bankDepo where Pin='"+pinnumber+"'");
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
         setLayout(null);
         setSize(50, 200);
         setLocation(20, 20);
