@@ -41,9 +41,9 @@ public class miniStatement extends JFrame {
                                 + res.getString("Type") + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
                                 + res.getString("Amount") + "<br><br>" + "<html>");
                 if (res.getString("Type").equals("Deposit")) {
-                    balance += Integer.parseInt("amount");
+                    balance += Integer.parseInt(res.getString("amount"));
                 } else {
-                    balance -= Integer.parseInt("amount");
+                    balance -= Integer.parseInt(res.getString("amount"));
                 }
             }
         } catch (SQLException e) {
