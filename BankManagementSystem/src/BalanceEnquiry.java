@@ -51,4 +51,7 @@ public class BalanceEnquiry extends JFrame implements ActionListener {
         setVisible(false);
         new Transicition(pinnumber).setVisible(true);
     }
+    public static void main(String[]args){
+        new BalanceEnquiry("");
+    }
 }
