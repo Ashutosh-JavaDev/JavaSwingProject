@@ -56,6 +56,9 @@ public class miniStatement extends JFrame {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        JLabel bal=new JLabel("Your Current Balance is Rs "+balance);
+        bal.setBounds(15,700,300,25);
+        add(bal);
         setLayout(null);
         setSize(400, 600);
         setLocation(20, 20);
