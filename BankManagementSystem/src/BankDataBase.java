@@ -11,7 +11,7 @@ public class BankDataBase {
     public BankDataBase() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:mysql://BankManagementSystem", "root", "@Radhakrishna297");
+            conn = DriverManager.getConnection("jdbc:mysql:///BankManagementSystem", "root", "@Radhakrishna297");
             statem = conn.createStatement();
         }
 
